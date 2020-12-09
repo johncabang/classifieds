@@ -1,11 +1,9 @@
 import React from "react";
 
+import "./Hero.css";
+
 function Hero() {
-  return (
-    <>
-      <h3>Hero</h3>
-    </>
-  );
+  return <div className="hero"></div>;
 }
 
 export default Hero;

@@ -2,14 +2,6 @@
   text-align: center;
 }
 
-.navbar__links {
-  text-decoration: none;
-}
-
-.navbar__links:visited {
-  color: #000000;
-}
-
 .navbar__container {
   display: flex;
   justify-content: space-around;
@@ -17,15 +9,20 @@
   min-height: 10vh;
 }
 
-.navbar__links {
+.navbar__right__links {
   display: flex;
   justify-content: space-around;
   width: 15%;
   list-style: none;
+  align-items: center;
 }
 
-.navbar__button {
-  text-transform: lowercase;
+.navbar__links {
+  text-decoration: none;
+}
+
+.navbar__links:visited {
+  color: #000000;
 }
 
 /* .navbar__search {
