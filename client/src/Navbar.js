@@ -1,25 +1,35 @@
 import React from "react";
-import { Button } from "@material-ui/core";
+import InputBase from "@material-ui/core/InputBase";
+import SearchIcon from "@material-ui/icons/Search";
+
+import { Link } from "react-router-dom";
+
 import "./App.css";
 
 function Navbar() {
   return (
-    <nav>
-      <h3>classifieds</h3>
+    <navbar className="navbar__container">
+      <Link className="navbar__links" to="/">
+        <h3>Classifieds</h3>
+      </Link>
+      {/* <div className="navbar__search">
+        <div className="navbar__searchIcon">
+          <SearchIcon />
+        </div>
+        <InputBase placeholder="Search for anything..." />
+      </div> */}
       <ul className="navbar__links">
-        <li>
-          <Button color="primary">register</Button>
-        </li>
-        <li>
-          <Button color="primary">login</Button>
-        </li>
-        <li>
-          <Button variant="outlined" color="primary">
-            post
-          </Button>
-        </li>
+        <Link className="navbar__links" to="/register">
+          <li>Register</li>
+        </Link>
+        <Link className="navbar__links" to="login">
+          <li>Login</li>
+        </Link>
+        <Link className="navbar__links" to="post">
+          <li>Post</li>
+        </Link>
       </ul>
-    </nav>
+    </navbar>
   );
 }
 
