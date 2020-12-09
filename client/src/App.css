@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.navbar__links {
+  display: flex;
+  justify-content: space-around;
+  width: 15%;
+  list-style: none;
+}
+
+button {
+  text-transform: none;
+}
