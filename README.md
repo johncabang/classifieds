@@ -1,10 +1,10 @@
 ### Classifieds **(work in progress)**
 
-## Tech Stack
+### Tech Stack
 
 - React
 - Material UI
 
-## Screenshots
+### Screenshots
 
 !["classifieds wip"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds_wip.png?raw=true)

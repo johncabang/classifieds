@@ -8,6 +8,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+
 // import Hero from "../Hero";
 
 const useStyles = makeStyles((theme) => ({
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Signin() {
+function Signin(props) {
   const classes = useStyles();
 
   return (
@@ -35,7 +36,7 @@ function Signin() {
       <Container component="main" maxWidth="xs">
         <div className={classes.paper}>
           <Typography component="h1" variant="h5">
-            Sign in
+            Sign In
           </Typography>
           <form className={classes.form} noValidate>
             <TextField
@@ -73,12 +74,12 @@ function Signin() {
             >
               Sign in
             </Button>
-            <Grid container>
-              <Grid item xs>
+            <Grid container justify="flex-end">
+              {/* <Grid item xs>
                 <Link href="#" variant="body2">
                   Forgot password?
                 </Link>
-              </Grid>
+              </Grid> */}
               <Grid item>
                 <Link href="register" variant="body2">
                   {"Don't have an account? Register"}

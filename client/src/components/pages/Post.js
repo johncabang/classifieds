@@ -1,14 +1,3 @@
-// import React from "react";
-
-// function Post() {
-//   return (
-//     <>
-//       <h3>Post</h3>
-//     </>
-//   );
-// }
-
-// export default Post;
 import React from "react";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
@@ -19,6 +8,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
+
 // import Hero from "../Hero";
 
 const useStyles = makeStyles((theme) => ({
@@ -36,9 +26,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3, 0, 2),
   },
   formControl: {
-    width: "50%",
-    margin: theme.spacing(1),
-    justifyContent: "flex-start",
+    width: "100%",
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
@@ -69,6 +57,7 @@ function Post() {
                 value={category}
                 onChange={handleChange}
                 autoFocus
+                color="primary"
               >
                 <MenuItem value="" disabled>
                   Category
@@ -125,25 +114,13 @@ function Post() {
               id="price"
             />
 
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="email"
-              label="Email Address"
-              type="email"
-              id="email"
-            />
-
             <Button
               type="submit"
               fullWidth
               variant="contained"
-              color="white"
               className={classes.submit}
             >
-              Post
+              Post Your Ad
             </Button>
           </form>
         </div>

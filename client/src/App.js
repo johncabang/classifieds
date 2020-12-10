@@ -4,20 +4,40 @@ import Register from "./components/pages/Register";
 import Signin from "./components/pages/Signin";
 import Post from "./components/pages/Post";
 import Navbar from "./Navbar";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: "#e0e0e0",
+      main: "#616161",
+      dark: "#212121",
+      contrastText: "#fff",
+    },
+    secondary: {
+      light: "#ff7961",
+      main: "#f44336",
+      dark: "#ba000d",
+      contrastText: "#000",
+    },
+  },
+});
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/register" component={Register} />
-          <Route path="/signin" component={Signin} />
-          <Route path="/post" component={Post} />
-        </Switch>
+        <ThemeProvider theme={theme}>
+          <Navbar />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/register" component={Register} />
+            <Route path="/signin" component={Signin} />
+            <Route path="/post" component={Post} />
+          </Switch>
+        </ThemeProvider>
       </div>
     </Router>
   );
