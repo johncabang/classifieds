@@ -1,8 +1,8 @@
 import "./App.css";
 import Home from "./components/pages/Home";
+import Register from "./components/pages/Register";
 import Signin from "./components/pages/Signin";
 import Post from "./components/pages/Post";
-import Register from "./components/pages/Register";
 import Navbar from "./Navbar";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";

@@ -24,23 +24,3 @@
 .navbar__links:visited {
   color: #000000;
 }
-
-/* .navbar__search {
-  display: flex;
-  position: relative;
-  width: 20%;
-  height: 40px;
-  background-color: #e4e4e4;
-  justify-content: center;
-  padding: 0 20px;
-  border-radius: 5px;
-}
-
-.navbar__searchIcon {
-  position: relative;
-  display: flex;
-  justify-self: start;
-  height: 100%;
-  padding: 8px 20px;
-  color: #949494;
-} */

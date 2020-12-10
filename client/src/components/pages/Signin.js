@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -34,7 +33,6 @@ function Signin() {
     <>
       {/* <Hero /> */}
       <Container component="main" maxWidth="xs">
-        <CssBaseline />
         <div className={classes.paper}>
           <Typography component="h1" variant="h5">
             Sign in
@@ -70,7 +68,7 @@ function Signin() {
               type="submit"
               fullWidth
               variant="contained"
-              color="primary"
+              color="white"
               className={classes.submit}
             >
               Sign in
