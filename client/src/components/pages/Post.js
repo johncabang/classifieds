@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Post() {
   const classes = useStyles();
-  const [category, setCategory] = React.useState("");
+  const [category, setCategory] = useState("");
 
   const handleChange = (event) => {
     setCategory(event.target.value);
@@ -65,17 +65,17 @@ function Post() {
                 <MenuItem value={10}>Arts & Collectibles</MenuItem>
                 <MenuItem value={20}>Books</MenuItem>
                 <MenuItem value={30}>Cameras</MenuItem>
-                <MenuItem value={30}>Clothing</MenuItem>
-                <MenuItem value={30}>Computers</MenuItem>
-                <MenuItem value={30}>Electronics</MenuItem>
-                <MenuItem value={30}>Free Stuff</MenuItem>
-                <MenuItem value={30}>Home</MenuItem>
-                <MenuItem value={30}>Phones</MenuItem>
-                <MenuItem value={30}>Sporting Goods</MenuItem>
-                <MenuItem value={30}>Tools</MenuItem>
-                <MenuItem value={30}>Toys</MenuItem>
-                <MenuItem value={30}>Video Games & Consoles</MenuItem>
-                <MenuItem value={30}>Other</MenuItem>
+                <MenuItem value={40}>Clothing</MenuItem>
+                <MenuItem value={50}>Computers</MenuItem>
+                <MenuItem value={60}>Electronics</MenuItem>
+                <MenuItem value={70}>Free Stuff</MenuItem>
+                <MenuItem value={80}>Home</MenuItem>
+                <MenuItem value={90}>Phones</MenuItem>
+                <MenuItem value={100}>Sporting Goods</MenuItem>
+                <MenuItem value={110}>Tools</MenuItem>
+                <MenuItem value={120}>Toys</MenuItem>
+                <MenuItem value={130}>Video Games & Consoles</MenuItem>
+                <MenuItem value={140}>Other</MenuItem>
               </Select>
             </FormControl>
 

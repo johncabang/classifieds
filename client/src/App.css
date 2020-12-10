@@ -24,3 +24,11 @@
 .navbar__links:visited {
   color: #000000;
 }
+
+.posts__container {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  margin: 0 50px;
+  flex-wrap: wrap;
+}
