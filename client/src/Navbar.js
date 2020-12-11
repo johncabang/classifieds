@@ -5,7 +5,8 @@ import { Button } from "@material-ui/core";
 
 import IconButton from "@material-ui/core/IconButton";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+
+import ProfileMenu from "./components/ProfileMenu";
 
 import "./App.css";
 
@@ -28,10 +29,9 @@ function Navbar() {
           </IconButton>
         </li>
         <li>
-          <IconButton aria-label="add to favorites">
-            <AccountCircleIcon />
-          </IconButton>
+          <ProfileMenu />
         </li>
+
         <Link className="navbar__links navbar__post" to="post">
           <Button variant="outlined" size="small">
             Post

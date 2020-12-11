@@ -81,6 +81,18 @@ function Register() {
                 autoComplete="current-password"
               />
             </Grid>
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="confirmPassword"
+                label="Confirm Password"
+                type="password"
+                id="confirmPassword"
+                autoComplete="current-password"
+              />
+            </Grid>
           </Grid>
           <Button
             type="submit"

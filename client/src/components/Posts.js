@@ -1,4 +1,5 @@
 import React from "react";
+
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -7,18 +8,10 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import IconButton from "@material-ui/core/IconButton";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
 import "../App.css";
-
-// mock data
-// const posts = {
-//   title: "",
-//   image: "",
-//   price:
-// }
 
 const useStyles = makeStyles({
   root: {
@@ -37,6 +30,28 @@ function Posts() {
 
   return (
     <div className="posts__container">
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image="https://images.pexels.com/photos/3661197/pexels-photo-3661197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            title="Zoo Animal Figurines"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h7" component="h3" align="left">
+              Zoo Animal Figurines
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" color="primary">
+            $20.00
+          </Button>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon />
+          </IconButton>
+        </CardActions>
+      </Card>
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia
@@ -83,51 +98,6 @@ function Posts() {
           </IconButton>
         </CardActions>
       </Card>
-      <Card className={classes.root}>
-        <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image="https://images.pexels.com/photos/2065695/pexels-photo-2065695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            title="Air Jordan 1"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h7" component="h3" align="left">
-              Air Jordan 1
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Button size="small" color="primary">
-            $250.00
-          </Button>
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
-          </IconButton>
-        </CardActions>
-      </Card>
-
-      <Card className={classes.root}>
-        <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image="https://images.pexels.com/photos/5961235/pexels-photo-5961235.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            title="Playstation 5"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h7" component="h3" align="left">
-              Playstation 5
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Button size="small" color="primary">
-            $800.00
-          </Button>
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
-          </IconButton>
-        </CardActions>
-      </Card>
 
       <Card className={classes.root}>
         <CardActionArea>
@@ -168,6 +138,75 @@ function Posts() {
         <CardActions>
           <Button size="small" color="primary">
             $120.00
+          </Button>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon />
+          </IconButton>
+        </CardActions>
+      </Card>
+
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image="https://images.pexels.com/photos/191360/pexels-photo-191360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            title="Doll House"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h7" component="h3" align="left">
+              Doll House
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" color="primary">
+            $40.00
+          </Button>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon />
+          </IconButton>
+        </CardActions>
+      </Card>
+
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image="https://images.pexels.com/photos/4219892/pexels-photo-4219892.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            title="Original Playstation"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h7" component="h3" align="left">
+              Original Playstation
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" color="primary">
+            $80.00
+          </Button>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon />
+          </IconButton>
+        </CardActions>
+      </Card>
+
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image="https://images.pexels.com/photos/2065695/pexels-photo-2065695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            title="Air Jordan 1"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h7" component="h3" align="left">
+              Air Jordan 1
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" color="primary">
+            $250.00
           </Button>
           <IconButton aria-label="add to favorites">
             <FavoriteIcon />
