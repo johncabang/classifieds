@@ -3,6 +3,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
 
+import IconButton from "@material-ui/core/IconButton";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+
 import "./App.css";
 
 function Navbar() {
@@ -18,6 +22,16 @@ function Navbar() {
         <Link className="navbar__links" to="signin">
           <li>Sign In</li>
         </Link>
+        <li>
+          <IconButton aria-label="add to favorites">
+            <FavoriteBorderIcon />
+          </IconButton>
+        </li>
+        <li>
+          <IconButton aria-label="add to favorites">
+            <AccountCircleIcon />
+          </IconButton>
+        </li>
         <Link className="navbar__links navbar__post" to="post">
           <Button variant="outlined" size="small">
             Post

@@ -12,7 +12,7 @@
 .navbar__right__links {
   display: flex;
   justify-content: space-around;
-  width: 15%;
+  width: 20%;
   list-style: none;
   align-items: center;
 }
@@ -32,3 +32,20 @@
   margin: 0 50px;
   flex-wrap: wrap;
 }
+
+/* .posts__cardactions {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.posts__images {
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all 0.8s ease-in-out;
+}
+
+.posts__images:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
+} */

@@ -5,10 +5,20 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
+import IconButton from "@material-ui/core/IconButton";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
 import "../App.css";
+
+// mock data
+// const posts = {
+//   title: "",
+//   image: "",
+//   price:
+// }
 
 const useStyles = makeStyles({
   root: {
@@ -30,6 +40,7 @@ function Posts() {
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia
+            className="posts__images"
             className={classes.media}
             image="https://images.pexels.com/photos/220639/pexels-photo-220639.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
             title="Automotive Tools"
@@ -40,12 +51,16 @@ function Posts() {
             </Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions>
+        <CardActions className="posts__cardactions">
           <Button size="small" color="primary">
             $25.00
           </Button>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon />
+          </IconButton>
         </CardActions>
       </Card>
+
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia
@@ -63,6 +78,9 @@ function Posts() {
           <Button size="small" color="primary">
             $125.00
           </Button>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon />
+          </IconButton>
         </CardActions>
       </Card>
       <Card className={classes.root}>
@@ -82,6 +100,9 @@ function Posts() {
           <Button size="small" color="primary">
             $250.00
           </Button>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon />
+          </IconButton>
         </CardActions>
       </Card>
 
@@ -102,6 +123,9 @@ function Posts() {
           <Button size="small" color="primary">
             $800.00
           </Button>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon />
+          </IconButton>
         </CardActions>
       </Card>
 
@@ -122,6 +146,9 @@ function Posts() {
           <Button size="small" color="primary">
             $20.00
           </Button>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon />
+          </IconButton>
         </CardActions>
       </Card>
 
@@ -142,6 +169,9 @@ function Posts() {
           <Button size="small" color="primary">
             $120.00
           </Button>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon />
+          </IconButton>
         </CardActions>
       </Card>
     </div>
