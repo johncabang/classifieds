@@ -34,7 +34,7 @@ function Navbar() {
 
         <Link className="navbar__links navbar__post" to="post">
           <Button variant="outlined" size="small">
-            Post
+            Post AD
           </Button>
         </Link>
       </ul>

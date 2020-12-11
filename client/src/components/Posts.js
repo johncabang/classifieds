@@ -8,6 +8,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import IconButton from "@material-ui/core/IconButton";
 import FavoriteIcon from "@material-ui/icons/Favorite";
+import MessageOutlinedIcon from "@material-ui/icons/MessageOutlined";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
@@ -50,8 +51,12 @@ function Posts() {
           <IconButton aria-label="add to favorites">
             <FavoriteIcon />
           </IconButton>
+          <IconButton aria-label="message">
+            <MessageOutlinedIcon />
+          </IconButton>
         </CardActions>
       </Card>
+
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia
@@ -71,6 +76,9 @@ function Posts() {
           </Button>
           <IconButton aria-label="add to favorites">
             <FavoriteIcon />
+          </IconButton>
+          <IconButton aria-label="message">
+            <MessageOutlinedIcon />
           </IconButton>
         </CardActions>
       </Card>
@@ -95,6 +103,9 @@ function Posts() {
           <IconButton aria-label="add to favorites">
             <FavoriteIcon />
           </IconButton>
+          <IconButton aria-label="message">
+            <MessageOutlinedIcon />
+          </IconButton>
         </CardActions>
       </Card>
 
@@ -117,6 +128,9 @@ function Posts() {
           </Button>
           <IconButton aria-label="add to favorites">
             <FavoriteIcon />
+          </IconButton>
+          <IconButton aria-label="message">
+            <MessageOutlinedIcon />
           </IconButton>
         </CardActions>
       </Card>
@@ -141,6 +155,9 @@ function Posts() {
           <IconButton aria-label="add to favorites">
             <FavoriteIcon />
           </IconButton>
+          <IconButton aria-label="message">
+            <MessageOutlinedIcon />
+          </IconButton>
         </CardActions>
       </Card>
 
@@ -163,6 +180,9 @@ function Posts() {
           </Button>
           <IconButton aria-label="add to favorites">
             <FavoriteIcon />
+          </IconButton>
+          <IconButton aria-label="message">
+            <MessageOutlinedIcon />
           </IconButton>
         </CardActions>
       </Card>
@@ -187,6 +207,9 @@ function Posts() {
           <IconButton aria-label="add to favorites">
             <FavoriteIcon />
           </IconButton>
+          <IconButton aria-label="message">
+            <MessageOutlinedIcon />
+          </IconButton>
         </CardActions>
       </Card>
 
@@ -209,6 +232,9 @@ function Posts() {
           </Button>
           <IconButton aria-label="add to favorites">
             <FavoriteIcon />
+          </IconButton>
+          <IconButton aria-label="message">
+            <MessageOutlinedIcon />
           </IconButton>
         </CardActions>
       </Card>
