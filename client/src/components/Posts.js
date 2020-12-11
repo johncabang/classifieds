@@ -55,7 +55,6 @@ function Posts() {
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia
-            className="posts__images"
             className={classes.media}
             image="https://images.pexels.com/photos/220639/pexels-photo-220639.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
             title="Automotive Tools"

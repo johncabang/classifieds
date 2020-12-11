@@ -12,7 +12,7 @@ import "./App.css";
 
 function Navbar() {
   return (
-    <navbar className="navbar__container">
+    <div className="navbar__container">
       <Link className="navbar__links" to="/">
         <h3>Classifieds</h3>
       </Link>
@@ -38,7 +38,7 @@ function Navbar() {
           </Button>
         </Link>
       </ul>
-    </navbar>
+    </div>
   );
 }
 
