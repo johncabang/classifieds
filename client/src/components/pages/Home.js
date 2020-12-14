@@ -7,6 +7,7 @@ function Home() {
   return (
     <div>
       <Hero />
+
       <br />
       <Posts />
     </div>
