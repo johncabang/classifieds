@@ -5,10 +5,9 @@ import { Button } from "@material-ui/core";
 
 import IconButton from "@material-ui/core/IconButton";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import Badge from "@material-ui/core/Badge";
-import NotificationsNoneOutlinedIcon from "@material-ui/icons/NotificationsNoneOutlined";
 
 import ProfileMenu from "./components/ProfileMenu";
+import NotificationMenu from "./components/NotificationMenu";
 
 import "./App.css";
 
@@ -31,11 +30,7 @@ function Navbar() {
           </IconButton>
         </li>
         <li>
-          <IconButton aria-label="show 7 new notifications">
-            <Badge badgeContent={7} color="secondary">
-              <NotificationsNoneOutlinedIcon />
-            </Badge>
-          </IconButton>
+          <NotificationMenu />
         </li>
         <li>
           <ProfileMenu />
