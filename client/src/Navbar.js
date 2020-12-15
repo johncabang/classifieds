@@ -3,11 +3,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
 
-import IconButton from "@material-ui/core/IconButton";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-
 import ProfileMenu from "./components/ProfileMenu";
 import NotificationMenu from "./components/NotificationMenu";
+import FavouriteMenu from "./components/FavouriteMenu";
 
 import "./App.css";
 
@@ -25,9 +23,7 @@ function Navbar() {
           <li>Sign In</li>
         </Link>
         <li>
-          <IconButton aria-label="add to favorites">
-            <FavoriteBorderIcon />
-          </IconButton>
+          <FavouriteMenu />
         </li>
         <li>
           <NotificationMenu />

@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 
-import { Link } from "react-router-dom";
-
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-
 import IconButton from "@material-ui/core/IconButton";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
-import Profile from "./pages/Profile";
-
-function ProfileMenu() {
+function FavouriteMenu() {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -24,29 +19,24 @@ function ProfileMenu() {
   return (
     <div>
       <IconButton
-        aria-label="add to favorites"
-        aria-controls="profile-menu"
+        aria-label="add to favourites"
+        aria-controls="favourite-menu"
         aria-haspopup="true"
         onClick={handleClick}
       >
-        <AccountCircleIcon />
+        <FavoriteBorderIcon />
       </IconButton>
       <Menu
-        id="profile-menu"
+        id="favourite-menu"
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} component={Link} to="/pages/Profile">
-          Profile
-        </MenuItem>
-        <MenuItem onClick={handleClose}>My Orders</MenuItem>
-        <MenuItem onClick={handleClose}>Account Settings</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={handleClose}>Favourites</MenuItem>
       </Menu>
     </div>
   );
 }
 
-export default ProfileMenu;
+export default FavouriteMenu;
