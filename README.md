@@ -9,10 +9,10 @@
 
 ### Screenshots
 
-!["classifieds wip1"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds_wip1.png?raw=true)
+!["classifieds wip1"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds_wip1v1.png?raw=true)
 
 !["classifieds wip2"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds_register.png?raw=true)
 
 !["classifieds wip2"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds_signin.png?raw=true)
 
-!["classifieds wip2"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds_wip2.png?raw=true)
+!["classifieds wip2"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds_wip2v1.png?raw=true)
