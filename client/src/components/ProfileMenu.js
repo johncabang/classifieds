@@ -8,8 +8,6 @@ import MenuItem from "@material-ui/core/MenuItem";
 import IconButton from "@material-ui/core/IconButton";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
-import Profile from "./pages/Profile";
-
 function ProfileMenu() {
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -38,7 +36,7 @@ function ProfileMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} component={Link} to="/pages/Profile">
+        <MenuItem component={Link} to="/profile" onClick={handleClose}>
           Profile
         </MenuItem>
         <MenuItem onClick={handleClose}>My Orders</MenuItem>

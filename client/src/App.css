@@ -27,6 +27,7 @@ li {
 
 .navbar__links {
   text-decoration: none;
+  color: inherit;
 }
 
 .navbar__links:visited {
