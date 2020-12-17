@@ -39,8 +39,12 @@ function ProfileMenu() {
         <MenuItem component={Link} to="/profile" onClick={handleClose}>
           Profile
         </MenuItem>
-        <MenuItem onClick={handleClose}>My Orders</MenuItem>
-        <MenuItem onClick={handleClose}>Account Settings</MenuItem>
+        <MenuItem component={Link} to="/orders" onClick={handleClose}>
+          My Orders
+        </MenuItem>
+        <MenuItem component={Link} to="/settings" onClick={handleClose}>
+          Account Settings
+        </MenuItem>
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
     </div>
