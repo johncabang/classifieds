@@ -7,6 +7,8 @@ import Navbar from "./Navbar";
 import Profile from "./components/pages/Profile";
 import Orders from "./components/pages/Orders";
 import Settings from "./components/pages/Settings";
+import Notifications from "./components/pages/Notifications";
+import Favourites from "./components/pages/Favourites";
 
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
@@ -42,6 +44,9 @@ function App() {
             <Route path="/profile" component={Profile} />
             <Route path="/orders" component={Orders} />
             <Route path="/settings" component={Settings} />
+            <Route path="/notifications" component={Notifications} />
+            <Route path="/favourites" component={Favourites} />
+
             <Route path="/post" component={Post} />
           </Switch>
         </ThemeProvider>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -33,7 +34,9 @@ function FavouriteMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Favourites</MenuItem>
+        <MenuItem component={Link} to="/favourites" onClick={handleClose}>
+          Favourites
+        </MenuItem>
       </Menu>
     </div>
   );
