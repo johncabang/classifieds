@@ -5,7 +5,6 @@ import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 
 import Hero from "../Hero";
@@ -19,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     position: "absolute",
     top: "20%",
-    width: "25%",
+    width: "400px",
     backgroundColor: "rgba(255, 255, 255, 0.8)",
     boxShadow: "0px 8px 32px 0px rgba(55, 55, 82, 0.8)",
     backdropFilter: "blur(8.0px)",
@@ -44,7 +43,6 @@ function Register() {
     <>
       <Hero />
       <div className={classes.root}>
-        {/* <Container component="main" maxWidth="xs"> */}
         <Paper className={classes.paper}>
           <Typography component="h1" variant="h5">
             Register
@@ -129,7 +127,6 @@ function Register() {
             </Grid>
           </form>
         </Paper>
-        {/* </Container> */}
       </div>
     </>
   );
