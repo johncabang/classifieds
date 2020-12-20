@@ -20,11 +20,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    backgroundColor: "rgba(255, 255, 255, 0.5)",
-    boxShadow: "0px 8px 32px 0px rgba(55, 55, 82, 0.5)",
+    backgroundColor: "rgba(255, 255, 255, 0.7)",
+    boxShadow: "0px 8px 32px 0px rgba(55, 55, 82, 0.8)",
     backdropFilter: "blur(4.0px)",
     borderRadius: "10px",
-    border: "1px solid rgba(255, 255, 255, 0.2)",
+    border: "2px solid rgba(255, 255, 255, 0.5)",
     padding: "30px",
   },
   form: {
@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    backgroundColor: "white",
   },
 }));
 
