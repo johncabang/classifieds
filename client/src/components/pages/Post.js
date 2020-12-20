@@ -9,14 +9,22 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 
-// import Hero from "../Hero";
+import Hero from "../Hero";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    marginTop: theme.spacing(8),
+    position: "absolute",
+    top: "20%",
+    width: "25%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    backgroundColor: "rgba(255, 255, 255, 0.8)",
+    boxShadow: "0px 8px 32px 0px rgba(55, 55, 82, 0.8)",
+    backdropFilter: "blur(4.0px)",
+    borderRadius: "40px",
+    border: "2px solid rgba(255, 255, 255, 0.5)",
+    padding: "30px",
   },
   form: {
     width: "100%", // Fix IE 11 issue.
@@ -24,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    backgroundColor: "white",
   },
   formControl: {
     width: "100%",
@@ -42,7 +51,7 @@ function Post() {
   };
   return (
     <>
-      {/* <Hero /> */}
+      <Hero />
       <Container component="main" maxWidth="xs">
         <div className={classes.paper}>
           <Typography component="h1" variant="h5">

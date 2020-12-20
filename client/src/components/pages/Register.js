@@ -11,17 +11,16 @@ import Hero from "../Hero";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    // marginTop: theme.spacing(-70),
     position: "absolute",
     top: "20%",
     width: "25%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    backgroundColor: "rgba(255, 255, 255, 0.7)",
+    backgroundColor: "rgba(255, 255, 255, 0.8)",
     boxShadow: "0px 8px 32px 0px rgba(55, 55, 82, 0.8)",
     backdropFilter: "blur(8.0px)",
-    borderRadius: "10px",
+    borderRadius: "40px",
     border: "2px solid rgba(255, 255, 255, 0.5)",
     padding: "30px",
   },
