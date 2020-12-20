@@ -7,18 +7,20 @@ import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
+import Paper from "@material-ui/core/Paper";
 
 import Hero from "../Hero";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
   paper: {
     position: "absolute",
     top: "20%",
-    width: "25%",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    width: "400px",
     backgroundColor: "rgba(255, 255, 255, 0.8)",
     boxShadow: "0px 8px 32px 0px rgba(55, 55, 82, 0.8)",
     backdropFilter: "blur(4.0px)",
@@ -42,8 +44,8 @@ function Signin(props) {
   return (
     <>
       <Hero />
-      <Container component="main" maxWidth="xs">
-        <div className={classes.paper}>
+      <div className={classes.root}>
+        <Paper className={classes.paper}>
           <Typography component="h1" variant="h5">
             Sign In
           </Typography>
@@ -96,8 +98,8 @@ function Signin(props) {
               </Grid>
             </Grid>
           </form>
-        </div>
-      </Container>
+        </Paper>
+      </div>
     </>
   );
 }
