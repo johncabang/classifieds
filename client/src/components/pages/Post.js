@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
+import Paper from "@material-ui/core/Paper";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
@@ -12,13 +12,15 @@ import Select from "@material-ui/core/Select";
 import Hero from "../Hero";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
   paper: {
     position: "absolute",
     top: "20%",
-    width: "25%",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    width: "400px",
     backgroundColor: "rgba(255, 255, 255, 0.8)",
     boxShadow: "0px 8px 32px 0px rgba(55, 55, 82, 0.8)",
     backdropFilter: "blur(4.0px)",
@@ -52,8 +54,8 @@ function Post() {
   return (
     <>
       <Hero />
-      <Container component="main" maxWidth="xs">
-        <div className={classes.paper}>
+      <div className={classes.root}>
+        <Paper className={classes.paper}>
           <Typography component="h1" variant="h5">
             Post
           </Typography>
@@ -132,8 +134,8 @@ function Post() {
               Post Your Ad
             </Button>
           </form>
-        </div>
-      </Container>
+        </Paper>
+      </div>
     </>
   );
 }
