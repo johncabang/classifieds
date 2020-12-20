@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    backgroundColor: "rgba(255, 255, 255, 0.8)",
+    backgroundColor: "rgba(255, 255, 255, 0.5)",
     boxShadow: "0px 8px 32px 0px rgba(55, 55, 82, 0.5)",
     backdropFilter: "blur(4.0px)",
     borderRadius: "10px",

@@ -9,14 +9,23 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 
-// import Hero from "../Hero";
+import Hero from "../Hero";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    marginTop: theme.spacing(8),
+    // marginTop: theme.spacing(8),
+    position: "absolute",
+    top: "20%",
+    width: "25%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    backgroundColor: "rgba(255, 255, 255, 0.5)",
+    boxShadow: "0px 8px 32px 0px rgba(55, 55, 82, 0.5)",
+    backdropFilter: "blur(4.0px)",
+    borderRadius: "10px",
+    border: "1px solid rgba(255, 255, 255, 0.2)",
+    padding: "30px",
   },
   form: {
     width: "100%", // Fix IE 11 issue.
@@ -32,7 +41,7 @@ function Signin(props) {
 
   return (
     <>
-      {/* <Hero /> */}
+      <Hero />
       <Container component="main" maxWidth="xs">
         <div className={classes.paper}>
           <Typography component="h1" variant="h5">
