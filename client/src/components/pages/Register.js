@@ -19,20 +19,32 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     top: "20%",
     width: "400px",
-    backgroundColor: "rgba(255, 255, 255, 0.8)",
-    boxShadow: "0px 8px 32px 0px rgba(55, 55, 82, 0.8)",
-    backdropFilter: "blur(8.0px)",
+    backgroundColor: "rgba(255, 255, 255, 0.5)",
+    backdropFilter: "blur(20px)",
     borderRadius: "40px",
-    border: "2px solid rgba(255, 255, 255, 0.5)",
+    border: "2px solid rgba(255, 255, 255, 0.4)",
     padding: "30px",
   },
   form: {
-    width: "100%", // Fix IE 11 issue.
+    width: "100%",
     marginTop: theme.spacing(3),
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
-    backgroundColor: "white",
+    textTransform: "none",
+  },
+  cssLabel: {
+    color: "#000",
+  },
+  cssOutlinedInput: {
+    "&$cssFocused $notchedOutline": {
+      borderColor: "#000",
+    },
+  },
+  cssFocused: {},
+  notchedOutline: {
+    borderWidth: "1px",
+    borderColor: "#000",
   },
 }));
 
@@ -58,8 +70,19 @@ function Register() {
                   fullWidth
                   id="firstName"
                   label="First Name"
-                  autoFocus
-                  className="register__textfield"
+                  InputLabelProps={{
+                    classes: {
+                      root: classes.cssLabel,
+                      focused: classes.cssFocused,
+                    },
+                  }}
+                  InputProps={{
+                    classes: {
+                      root: classes.cssOutlinedInput,
+                      focused: classes.cssFocused,
+                      notchedOutline: classes.notchedOutline,
+                    },
+                  }}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -71,6 +94,19 @@ function Register() {
                   label="Last Name"
                   name="lastName"
                   autoComplete="lname"
+                  InputLabelProps={{
+                    classes: {
+                      root: classes.cssLabel,
+                      focused: classes.cssFocused,
+                    },
+                  }}
+                  InputProps={{
+                    classes: {
+                      root: classes.cssOutlinedInput,
+                      focused: classes.cssFocused,
+                      notchedOutline: classes.notchedOutline,
+                    },
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -82,6 +118,19 @@ function Register() {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+                  InputLabelProps={{
+                    classes: {
+                      root: classes.cssLabel,
+                      focused: classes.cssFocused,
+                    },
+                  }}
+                  InputProps={{
+                    classes: {
+                      root: classes.cssOutlinedInput,
+                      focused: classes.cssFocused,
+                      notchedOutline: classes.notchedOutline,
+                    },
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -94,6 +143,19 @@ function Register() {
                   type="password"
                   id="password"
                   autoComplete="current-password"
+                  InputLabelProps={{
+                    classes: {
+                      root: classes.cssLabel,
+                      focused: classes.cssFocused,
+                    },
+                  }}
+                  InputProps={{
+                    classes: {
+                      root: classes.cssOutlinedInput,
+                      focused: classes.cssFocused,
+                      notchedOutline: classes.notchedOutline,
+                    },
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -106,6 +168,19 @@ function Register() {
                   type="password"
                   id="confirmPassword"
                   autoComplete="current-password"
+                  InputLabelProps={{
+                    classes: {
+                      root: classes.cssLabel,
+                      focused: classes.cssFocused,
+                    },
+                  }}
+                  InputProps={{
+                    classes: {
+                      root: classes.cssOutlinedInput,
+                      focused: classes.cssFocused,
+                      notchedOutline: classes.notchedOutline,
+                    },
+                  }}
                 />
               </Grid>
             </Grid>
@@ -113,7 +188,6 @@ function Register() {
               type="submit"
               fullWidth
               variant="contained"
-              color="white"
               className={classes.submit}
             >
               Register

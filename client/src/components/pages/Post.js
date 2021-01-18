@@ -21,11 +21,10 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     top: "20%",
     width: "400px",
-    backgroundColor: "rgba(255, 255, 255, 0.8)",
-    boxShadow: "0px 8px 32px 0px rgba(55, 55, 82, 0.8)",
-    backdropFilter: "blur(4.0px)",
+    backgroundColor: "rgba(255, 255, 255, 0.5)",
+    backdropFilter: "blur(20px)",
     borderRadius: "40px",
-    border: "2px solid rgba(255, 255, 255, 0.5)",
+    border: "2px solid rgba(255, 255, 255, 0.4)",
     padding: "30px",
   },
   form: {
@@ -35,6 +34,20 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
     backgroundColor: "white",
+    textTransform: "none",
+  },
+  cssLabel: {
+    color: "#000",
+  },
+  cssOutlinedInput: {
+    "&$cssFocused $notchedOutline": {
+      borderColor: "#000",
+    },
+  },
+  cssFocused: {},
+  notchedOutline: {
+    borderWidth: "1px",
+    borderColor: "#000",
   },
   formControl: {
     width: "100%",
@@ -67,7 +80,6 @@ function Post() {
                 id="demo-simple-select"
                 value={category}
                 onChange={handleChange}
-                autoFocus
                 color="primary"
               >
                 <MenuItem value="" disabled>
@@ -98,6 +110,19 @@ function Post() {
               id="adTitle"
               label="Ad Title"
               name="adTitle"
+              InputLabelProps={{
+                classes: {
+                  root: classes.cssLabel,
+                  focused: classes.cssFocused,
+                },
+              }}
+              InputProps={{
+                classes: {
+                  root: classes.cssOutlinedInput,
+                  focused: classes.cssFocused,
+                  notchedOutline: classes.notchedOutline,
+                },
+              }}
             />
 
             <TextField
@@ -112,6 +137,19 @@ function Post() {
               multiline
               rows={4}
               rowsMax={6}
+              InputLabelProps={{
+                classes: {
+                  root: classes.cssLabel,
+                  focused: classes.cssFocused,
+                },
+              }}
+              InputProps={{
+                classes: {
+                  root: classes.cssOutlinedInput,
+                  focused: classes.cssFocused,
+                  notchedOutline: classes.notchedOutline,
+                },
+              }}
             />
 
             <TextField
@@ -123,6 +161,19 @@ function Post() {
               label="Price"
               type="price"
               id="price"
+              InputLabelProps={{
+                classes: {
+                  root: classes.cssLabel,
+                  focused: classes.cssFocused,
+                },
+              }}
+              InputProps={{
+                classes: {
+                  root: classes.cssOutlinedInput,
+                  focused: classes.cssFocused,
+                  notchedOutline: classes.notchedOutline,
+                },
+              }}
             />
 
             <Button

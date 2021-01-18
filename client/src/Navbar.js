@@ -33,7 +33,11 @@ function Navbar() {
         </li>
 
         <Link className="navbar__links navbar__post" to="post">
-          <Button variant="outlined" size="small">
+          <Button
+            variant="outlined"
+            size="small"
+            style={{ textTransform: "none" }}
+          >
             Post AD
           </Button>
         </Link>
