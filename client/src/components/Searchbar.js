@@ -2,13 +2,20 @@ import React from "react";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import SearchIcon from "@material-ui/icons/Search";
 
-import InputBase from "@material-ui/core/InputBase";
+// import InputBase from "@material-ui/core/InputBase";
+// import Input from "@material-ui/core/Input";
+// import InputLabel from "@material-ui/core/InputLabel";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import FormControl from "@material-ui/core/FormControl";
+// import OutlinedInput from "@material-ui/core/OutlinedInput";
+import { TextField } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   search: {
     position: "relative",
     borderRadius: theme.shape.borderRadius,
     border: "2",
+    borderColor: "black",
     backgroundColor: fade(theme.palette.common.white, 0.25),
     "&:hover": {
       backgroundColor: "white",
@@ -38,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     width: "60ch",
     [theme.breakpoints.up("md")]: {
-      width: "80ch",
+      width: "20ch",
     },
   },
 }));
@@ -48,17 +55,24 @@ function Searchbar() {
 
   return (
     <div className={classes.search}>
-      <div className={classes.searchIcon}>
-        <SearchIcon />
-      </div>
-      <InputBase
-        placeholder="Search for anything…"
-        classes={{
-          root: classes.inputRoot,
-          input: classes.inputInput,
-        }}
-        inputProps={{ "aria-label": "search" }}
-      />
+      <div className={classes.searchIcon}></div>
+      <FormControl fullWidth className={classes.margin} variant="outlined">
+        <TextField
+          placeholder="search for anything..."
+          id="outlined-size-normal"
+          variant="outlined"
+          size="small"
+          fullWidth
+          style={{ width: "350px" }}
+          InputProps={{
+            startAdornment: (
+              <InputAdornment>
+                <SearchIcon style={{ paddingRight: 10 }} />
+              </InputAdornment>
+            ),
+          }}
+        />
+      </FormControl>
     </div>
   );
 }

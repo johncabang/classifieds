@@ -2,22 +2,6 @@
   text-align: center;
 }
 
-.navbar__container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-}
-
-.navbar__right__links {
-  display: flex;
-  justify-content: space-around;
-  width: 25%;
-  list-style: none;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
 ul {
   white-space: nowrap;
 }
@@ -32,12 +16,4 @@ li {
 
 .navbar__links:visited {
   color: #000000;
-}
-
-.posts__container {
-  display: flex;
-  justify-content: center;
-  padding: 50px;
-  margin: 0 50px;
-  flex-wrap: wrap;
 }

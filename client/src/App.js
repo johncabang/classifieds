@@ -3,7 +3,7 @@ import Home from "./components/pages/Home";
 import Register from "./components/pages/Register";
 import Signin from "./components/pages/Signin";
 import Post from "./components/pages/Post";
-import Navbar from "./Navbar";
+import Navbar from "./components/Navbar";
 import Profile from "./components/pages/Profile";
 import Orders from "./components/pages/Orders";
 import Settings from "./components/pages/Settings";

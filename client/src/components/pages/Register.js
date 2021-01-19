@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     top: "20%",
     width: "400px",
-    backgroundColor: "rgba(255, 255, 255, 0.5)",
+    backgroundColor: "rgba(255, 255, 255, 0.7)",
     backdropFilter: "blur(20px)",
     borderRadius: "40px",
     border: "2px solid rgba(255, 255, 255, 0.4)",
