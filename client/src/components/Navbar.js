@@ -13,7 +13,6 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     justifyContent: "space-around",
     alignItems: "center",
-    minHeight: "10vh",
     backgroundColor: "white",
   },
   links: {
@@ -24,9 +23,7 @@ const useStyles = makeStyles(() => ({
     alignItems: "center",
   },
   searchbar: {
-    display: "flex",
-    justifyContent: "center",
-    position: "fixed",
+    position: "absolute",
   },
 }));
 

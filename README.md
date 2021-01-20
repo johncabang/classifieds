@@ -2,7 +2,7 @@
 
 #### An app where you can put different types of things up for sale.
 
-### Tech Stack
+### Dependencies
 
 - React
 - Material UI

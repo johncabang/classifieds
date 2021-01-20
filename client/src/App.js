@@ -5,6 +5,7 @@ import Register from "./components/pages/Register";
 import Signin from "./components/pages/Signin";
 import Post from "./components/pages/Post";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Profile from "./components/pages/Profile";
 import MyAds from "./components/pages/MyAds";
 import MyOrders from "./components/pages/MyOrders";
@@ -41,6 +42,9 @@ const useStyles = makeStyles(() => ({
   root: {
     backgroundColor: "#F8F9F9",
     textAlign: "center",
+    borderTop: "6px solid #ff7961",
+    borderBottom: "6px solid #ff7961",
+    position: "relative",
   },
 }));
 
@@ -62,9 +66,9 @@ function App() {
             <Route path="/settings" component={Settings} />
             <Route path="/notifications" component={Notifications} />
             <Route path="/favourites" component={Favourites} />
-
             <Route path="/post" component={Post} />
           </Switch>
+          <Footer />
         </ThemeProvider>
       </div>
     </Router>

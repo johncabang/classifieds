@@ -4,21 +4,22 @@ import { Grid, Typography } from "@material-ui/core/";
 
 const useStyles = makeStyles(() => ({
   root: {
-    minHeight: "100vh",
+    display: "flex",
+    justifyContent: "space-around",
     alignItems: "center",
+    backgroundColor: "#ff7961",
+    color: "white",
+    height: "20vh",
   },
 }));
 
-function Settings() {
+function Footer() {
   const classes = useStyles();
-
   return (
-    <Grid container className={classes.root} spacing={0}>
-      <Grid item xs={12}>
-        <Typography variant="h5">Account Settings</Typography>
-      </Grid>
-    </Grid>
+    <div className={classes.root}>
+      <Typography variant="h2">Footer</Typography>
+    </div>
   );
 }
 
-export default Settings;
+export default Footer;
