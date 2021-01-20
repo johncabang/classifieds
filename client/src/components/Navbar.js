@@ -8,19 +8,25 @@ import NotificationMenu from "./NotificationMenu";
 import FavouriteMenu from "./FavouriteMenu";
 import Searchbar from "./Searchbar";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     display: "flex",
     justifyContent: "space-around",
     alignItems: "center",
     minHeight: "10vh",
+    backgroundColor: "white",
   },
   links: {
     display: "flex",
     justifyContent: "space-around",
-    width: "25%",
+    width: "22%",
     listStyle: "none",
     alignItems: "center",
+  },
+  searchbar: {
+    display: "flex",
+    justifyContent: "center",
+    position: "fixed",
   },
 }));
 
@@ -38,7 +44,9 @@ function Navbar() {
           classifieds
         </Typography>
       </Link>
-      <Searchbar />
+      <div className={classes.searchbar}>
+        <Searchbar />
+      </div>
       <ul className={classes.links}>
         <Link className="navbar__links" to="register">
           <li>Register</li>

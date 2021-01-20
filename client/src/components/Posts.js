@@ -85,8 +85,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around",
     overflow: "hidden",
     padding: 50,
-    paddingBottom: 200,
-    backgroundColor: theme.palette.background.paper,
+    paddingBottom: "20vh",
+    backgroundColor: "#F8F9F9",
   },
   gridList: {
     width: 800,
@@ -107,7 +107,7 @@ function Posts() {
     <div className={classes.root}>
       <GridList
         cellHeight={200}
-        spacing={4}
+        spacing={12}
         className={classes.gridList}
         cols={4}
       >

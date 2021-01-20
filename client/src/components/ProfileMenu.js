@@ -1,11 +1,7 @@
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
 
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
-
-import IconButton from "@material-ui/core/IconButton";
+import { Menu, MenuItem, IconButton } from "@material-ui/core/";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
 function ProfileMenu() {
@@ -39,7 +35,10 @@ function ProfileMenu() {
         <MenuItem component={Link} to="/profile" onClick={handleClose}>
           Profile
         </MenuItem>
-        <MenuItem component={Link} to="/orders" onClick={handleClose}>
+        <MenuItem component={Link} to="/myads" onClick={handleClose}>
+          My Ads
+        </MenuItem>
+        <MenuItem component={Link} to="/myorders" onClick={handleClose}>
           My Orders
         </MenuItem>
         <MenuItem component={Link} to="/settings" onClick={handleClose}>
