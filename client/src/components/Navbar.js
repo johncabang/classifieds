@@ -1,15 +1,12 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
-import { Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import { Button, Typography } from "@material-ui/core";
 
 import ProfileMenu from "./ProfileMenu";
 import NotificationMenu from "./NotificationMenu";
 import FavouriteMenu from "./FavouriteMenu";
 import Searchbar from "./Searchbar";
-
-// import "../App.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,7 +30,13 @@ function Navbar() {
   return (
     <div className={classes.root}>
       <Link className="navbar__links" to="/">
-        <h3>Classifieds</h3>
+        <Typography
+          variant="h5"
+          component="h5"
+          style={{ borderBottom: "3px solid #000" }}
+        >
+          classifieds
+        </Typography>
       </Link>
       <Searchbar />
       <ul className={classes.links}>

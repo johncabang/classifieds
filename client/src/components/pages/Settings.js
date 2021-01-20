@@ -1,9 +1,11 @@
 import React from "react";
 
+import { Typography } from "@material-ui/core/";
+
 function Settings() {
   return (
     <>
-      <h3>Account Settings</h3>
+      <Typography variant="h5">Account Settings</Typography>
     </>
   );
 }

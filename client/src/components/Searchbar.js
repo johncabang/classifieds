@@ -1,14 +1,7 @@
 import React from "react";
 import { fade, makeStyles } from "@material-ui/core/styles";
+import { FormControl, InputAdornment, TextField } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
-
-// import InputBase from "@material-ui/core/InputBase";
-// import Input from "@material-ui/core/Input";
-// import InputLabel from "@material-ui/core/InputLabel";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import FormControl from "@material-ui/core/FormControl";
-// import OutlinedInput from "@material-ui/core/OutlinedInput";
-import { TextField } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   search: {

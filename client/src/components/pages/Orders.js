@@ -1,9 +1,11 @@
 import React from "react";
 
+import { Typography } from "@material-ui/core/";
+
 function Orders() {
   return (
     <>
-      <h3>My Orders</h3>
+      <Typography variant="h5">My Orders</Typography>
     </>
   );
 }

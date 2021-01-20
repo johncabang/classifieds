@@ -1,14 +1,15 @@
 import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
-
-import GridList from "@material-ui/core/GridList";
-import GridListTile from "@material-ui/core/GridListTile";
-import GridListTileBar from "@material-ui/core/GridListTileBar";
-import ListSubheader from "@material-ui/core/ListSubheader";
-import IconButton from "@material-ui/core/IconButton";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import {
+  GridList,
+  GridListTile,
+  GridListTileBar,
+  IconButton,
+  ListSubheader,
+} from "@material-ui/core";
 import MessageOutlinedIcon from "@material-ui/icons/MessageOutlined";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 const tileData = [
   {
@@ -84,6 +85,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around",
     overflow: "hidden",
     padding: 50,
+    paddingBottom: 200,
     backgroundColor: theme.palette.background.paper,
   },
   gridList: {

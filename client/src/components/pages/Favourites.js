@@ -1,9 +1,11 @@
 import React from "react";
 
+import { Typography } from "@material-ui/core/";
+
 function Favourites() {
   return (
     <>
-      <h3>Favourites</h3>
+      <Typography variant="h5">Favourites</Typography>
     </>
   );
 }
