@@ -2,6 +2,8 @@ import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
 import {
+  Button,
+  Grid,
   GridList,
   GridListTile,
   GridListTileBar,
@@ -85,12 +87,16 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around",
     overflow: "hidden",
     padding: 50,
-    paddingBottom: "20vh",
+    // paddingBottom: "20vh",
     backgroundColor: "#F8F9F9",
+  },
+  listSubHeader: {
+    marginTop: 20,
+    marginBottom: 20,
+    fontSize: "20px",
   },
   gridList: {
     width: 800,
-    height: 1200,
   },
   icon: {
     color: "#fff",
@@ -104,53 +110,64 @@ function Posts() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <GridList
-        cellHeight={200}
-        spacing={12}
-        className={classes.gridList}
-        cols={4}
-      >
-        <GridListTile key="Subheader" cols={4} style={{ height: "auto" }}>
-          <ListSubheader component="div">
-            What's popular right now
-          </ListSubheader>
-        </GridListTile>
-        {tileData.map((tile) => (
-          <GridListTile
-            key={tile.id}
-            cols={tile.featured ? 4 : 1}
-            rows={tile.featured ? 2 : 1}
-          >
-            <img src={tile.img} alt={tile.title} />
-            <GridListTileBar
-              title={tile.title}
-              subtitle={<span>{tile.price}</span>}
-              actionIcon={
-                <IconButton
-                  aria-label={`tile.message`}
-                  className={classes.icon}
-                >
-                  <MessageOutlinedIcon />
-                </IconButton>
-              }
-            />
-            <GridListTileBar
-              className={classes.gridListTileBar}
-              titlePosition="top"
-              actionIcon={
-                <IconButton
-                  aria-label={`info about ${tile.title}`}
-                  className={classes.icon}
-                >
-                  <FavoriteBorderIcon />
-                </IconButton>
-              }
-            />
+    <Grid container className={classes.root} spacing={3}>
+      <Grid item xs={6}>
+        <GridList
+          cellHeight={200}
+          spacing={12}
+          className={classes.gridList}
+          cols={4}
+        >
+          <GridListTile key="Subheader" cols={4} style={{ height: "auto" }}>
+            <ListSubheader className={classes.listSubHeader} component="div">
+              What's popular right now
+            </ListSubheader>
           </GridListTile>
-        ))}
-      </GridList>
-    </div>
+          {tileData.map((tile) => (
+            <GridListTile
+              key={tile.id}
+              cols={tile.featured ? 4 : 1}
+              rows={tile.featured ? 2 : 1}
+            >
+              <img src={tile.img} alt={tile.title} />
+              <GridListTileBar
+                title={tile.title}
+                subtitle={<span>{tile.price}</span>}
+                actionIcon={
+                  <IconButton
+                    aria-label={`tile.message`}
+                    className={classes.icon}
+                  >
+                    <MessageOutlinedIcon />
+                  </IconButton>
+                }
+              />
+              <GridListTileBar
+                className={classes.gridListTileBar}
+                titlePosition="top"
+                actionIcon={
+                  <IconButton
+                    aria-label={`info about ${tile.title}`}
+                    className={classes.icon}
+                  >
+                    <FavoriteBorderIcon />
+                  </IconButton>
+                }
+              />
+            </GridListTile>
+          ))}
+        </GridList>
+      </Grid>
+      <Grid item xs={12}>
+        <Button
+          variant="outlined"
+          size="small"
+          style={{ textTransform: "none", margin: "70px 0 70px 0" }}
+        >
+          Load More
+        </Button>
+      </Grid>
+    </Grid>
   );
 }
 

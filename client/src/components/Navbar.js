@@ -63,9 +63,12 @@ function Navbar() {
 
         <Link className="navbar__links navbar__post" to="post">
           <Button
-            variant="outlined"
             size="small"
-            style={{ textTransform: "none" }}
+            style={{
+              textTransform: "none",
+              backgroundColor: "#ff7961",
+              color: "#fff",
+            }}
           >
             Post AD
           </Button>
