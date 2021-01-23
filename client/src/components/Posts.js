@@ -80,23 +80,20 @@ const tileData = [
   },
 ];
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-around",
-    overflow: "hidden",
-    padding: 50,
-    // paddingBottom: "20vh",
     backgroundColor: "#F8F9F9",
   },
   listSubHeader: {
     marginTop: 20,
     marginBottom: 20,
-    fontSize: "20px",
+    fontSize: "18px",
   },
   gridList: {
-    width: 800,
+    width: "100%",
   },
   icon: {
     color: "#fff",
@@ -110,15 +107,10 @@ function Posts() {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.root} spacing={3}>
+    <Grid container className={classes.root} spacing={0}>
       <Grid item xs={6}>
-        <GridList
-          cellHeight={200}
-          spacing={12}
-          className={classes.gridList}
-          cols={4}
-        >
-          <GridListTile key="Subheader" cols={4} style={{ height: "auto" }}>
+        <GridList cellHeight={200} className={classes.gridList} cols={4}>
+          <GridListTile key="Subheader" cols={4}>
             <ListSubheader className={classes.listSubHeader} component="div">
               What's popular right now
             </ListSubheader>

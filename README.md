@@ -16,3 +16,5 @@
 !["classifieds register"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds-003.png?raw=true)
 
 !["classifieds post"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds-004.png?raw=true)
+
+!["classifieds post"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds-005.png?raw=true)
