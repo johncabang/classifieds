@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { makeStyles } from "@material-ui/core/styles";
 import {
@@ -84,8 +85,11 @@ const useStyles = makeStyles(() => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
+    paddingLeft: 250,
+    paddingRight: 250,
     justifyContent: "space-around",
     backgroundColor: "#F8F9F9",
+    overflow: "hidden",
   },
   listSubHeader: {
     marginTop: 20,
@@ -107,59 +111,62 @@ function Posts() {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.root} spacing={0}>
-      <Grid item xs={6}>
-        <GridList cellHeight={200} className={classes.gridList} cols={4}>
-          <GridListTile key="Subheader" cols={4}>
-            <ListSubheader className={classes.listSubHeader} component="div">
-              What's popular right now
-            </ListSubheader>
-          </GridListTile>
-          {tileData.map((tile) => (
-            <GridListTile
-              key={tile.id}
-              cols={tile.featured ? 4 : 1}
-              rows={tile.featured ? 2 : 1}
-            >
-              <img src={tile.img} alt={tile.title} />
-              <GridListTileBar
-                title={tile.title}
-                subtitle={<span>{tile.price}</span>}
-                actionIcon={
-                  <IconButton
-                    aria-label={`tile.message`}
-                    className={classes.icon}
-                  >
-                    <MessageOutlinedIcon />
-                  </IconButton>
-                }
-              />
-              <GridListTileBar
-                className={classes.gridListTileBar}
-                titlePosition="top"
-                actionIcon={
-                  <IconButton
-                    aria-label={`info about ${tile.title}`}
-                    className={classes.icon}
-                  >
-                    <FavoriteBorderIcon />
-                  </IconButton>
-                }
-              />
+    <div className={classes.root}>
+      <Grid container spacing={0}>
+        <Grid item xs={12}>
+          <GridList cellHeight={200} className={classes.gridList} cols={4}>
+            <GridListTile key="Subheader" cols={4}>
+              <ListSubheader className={classes.listSubHeader} component="div">
+                What's popular right now
+              </ListSubheader>
             </GridListTile>
-          ))}
-        </GridList>
+            {tileData.map((tile) => (
+              <GridListTile
+                key={tile.id}
+                cols={tile.featured ? 4 : 1}
+                rows={tile.featured ? 2 : 1}
+              >
+                <img src={tile.img} alt={tile.title} />
+
+                <GridListTileBar
+                  title={tile.title}
+                  subtitle={<span>{tile.price}</span>}
+                  actionIcon={
+                    <IconButton
+                      aria-label={`tile.message`}
+                      className={classes.icon}
+                    >
+                      <MessageOutlinedIcon />
+                    </IconButton>
+                  }
+                />
+                <GridListTileBar
+                  className={classes.gridListTileBar}
+                  titlePosition="top"
+                  actionIcon={
+                    <IconButton
+                      aria-label={`info about ${tile.title}`}
+                      className={classes.icon}
+                    >
+                      <FavoriteBorderIcon />
+                    </IconButton>
+                  }
+                />
+              </GridListTile>
+            ))}
+          </GridList>
+        </Grid>
+        <Grid item xs={12}>
+          <Button
+            variant="outlined"
+            size="small"
+            style={{ textTransform: "none", margin: "70px 0 70px 0" }}
+          >
+            Load More
+          </Button>
+        </Grid>
       </Grid>
-      <Grid item xs={12}>
-        <Button
-          variant="outlined"
-          size="small"
-          style={{ textTransform: "none", margin: "70px 0 70px 0" }}
-        >
-          Load More
-        </Button>
-      </Grid>
-    </Grid>
+    </div>
   );
 }
 

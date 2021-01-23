@@ -12,6 +12,7 @@ import MyOrders from "./components/pages/MyOrders";
 import Settings from "./components/pages/Settings";
 import Notifications from "./components/pages/Notifications";
 import Favourites from "./components/pages/Favourites";
+import DetailedPost from "./components/pages/DetailedPost";
 
 import {
   makeStyles,
@@ -23,6 +24,7 @@ import "./App.css";
 
 const theme = createMuiTheme({
   palette: {
+    // type: "dark",
     primary: {
       light: "#e0e0e0",
       main: "#616161",
@@ -67,6 +69,7 @@ function App() {
             <Route path="/notifications" component={Notifications} />
             <Route path="/favourites" component={Favourites} />
             <Route path="/post" component={Post} />
+            <Route path="/posts/:id" component={DetailedPost} />
           </Switch>
           <Footer />
         </ThemeProvider>

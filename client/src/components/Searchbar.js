@@ -20,7 +20,7 @@ function Searchbar() {
           id="outlined-size-normal"
           variant="outlined"
           size="small"
-          style={{ width: "50vh" }}
+          style={{ width: "40vh" }}
           InputProps={{
             startAdornment: (
               <InputAdornment>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import { Button, Typography } from "@material-ui/core";
+import { Box, Button, Typography } from "@material-ui/core";
 
 import ProfileMenu from "./ProfileMenu";
 import NotificationMenu from "./NotificationMenu";
@@ -41,9 +41,9 @@ function Navbar() {
           classifieds
         </Typography>
       </Link>
-      <div className={classes.searchbar}>
+      <Box className={classes.searchbar}>
         <Searchbar />
-      </div>
+      </Box>
       <ul className={classes.links}>
         <Link className="navbar__links" to="register">
           <li>Register</li>

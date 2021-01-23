@@ -6,7 +6,6 @@ const useStyles = makeStyles(() => ({
   root: {
     minHeight: "80vh",
     alignItems: "center",
-    position: "",
   },
 }));
 
