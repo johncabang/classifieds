@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
     alignItems: "center",
   },
 }));
-function DetailedPost() {
+function DetailedPost(props) {
   const classes = useStyles();
 
   const { id } = useParams();

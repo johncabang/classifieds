@@ -126,8 +126,9 @@ function Posts() {
                 cols={tile.featured ? 4 : 1}
                 rows={tile.featured ? 2 : 1}
               >
-                <img src={tile.img} alt={tile.title} />
-
+                <Link to={`/posts/${tile.id}`}>
+                  <img src={tile.img} alt={tile.title} />
+                </Link>
                 <GridListTileBar
                   title={tile.title}
                   subtitle={<span>{tile.price}</span>}
