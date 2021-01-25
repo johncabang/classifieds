@@ -43,10 +43,10 @@ const theme = createMuiTheme({
 const useStyles = makeStyles(() => ({
   root: {
     backgroundColor: "#F8F9F9",
-    textAlign: "center",
+    // textAlign: "center",
     borderTop: "6px solid #ff7961",
     borderBottom: "6px solid #ff7961",
-    position: "relative",
+    // position: "relative",
   },
 }));
 

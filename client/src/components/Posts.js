@@ -85,11 +85,11 @@ const useStyles = makeStyles(() => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
-    paddingLeft: 250,
-    paddingRight: 250,
-    justifyContent: "space-around",
+    justifyContent: "center",
     backgroundColor: "#F8F9F9",
-    overflow: "hidden",
+    // overflow: "hidden",
+    marginLeft: 275,
+    marginRight: 275,
   },
   listSubHeader: {
     marginTop: 20,

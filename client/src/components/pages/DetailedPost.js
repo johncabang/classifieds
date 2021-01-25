@@ -5,22 +5,33 @@ import {
   Button,
   Card,
   CardActions,
-  CardActionArea,
   CardContent,
   CardMedia,
   Grid,
+  TextField,
   Typography,
 } from "@material-ui/core/";
 import { useParams } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
   root: {
-    maxWidth: 500,
     minHeight: "100vh",
-    alignItems: "center",
+    paddingTop: 100,
+    paddingBottom: 100,
+  },
+  card: {
+    maxWidth: 500,
+  },
+  cardcontainer: {
+    display: "flex",
+    justifyContent: "center",
   },
   media: {
     height: 500,
+  },
+  formcontainer: {
+    display: "flex",
+    flexDirection: "column",
   },
 }));
 function DetailedPost() {
@@ -29,12 +40,13 @@ function DetailedPost() {
   const { id } = useParams();
 
   return (
-    <div className={classes.root}>
-      <Grid containerspacing={0}>
+    <div>
+      <Grid container spacing={0} className={classes.root}>
         <Grid item xs={12}>
-          <Typography variant="h5">Detailed - {id}</Typography>
-          <Card className={classes.card}>
-            <CardActionArea>
+          {/* <Typography variant="h5">Detailed - {id}</Typography> */}
+          {console.log("this is from detailed post " + id)}
+          <div className={classes.cardcontainer}>
+            <Card className={classes.card}>
               <CardMedia
                 className={classes.media}
                 image="https://images.pexels.com/photos/2065695/pexels-photo-2065695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -44,6 +56,9 @@ function DetailedPost() {
                 <Typography gutterBottom variant="h5" component="h2">
                   Air Jordan
                 </Typography>
+                <Typography variant="h6" component="h2">
+                  $350
+                </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
                   The Air Jordan 1 High debuted in 1985 as the first signature
                   sneaker developed by Nike for Michael Jordan. The Peter Moore
@@ -52,13 +67,25 @@ function DetailedPost() {
                   Jordan Wings logo and featured Nike Air.
                 </Typography>
               </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary">
-                Leave a message
-              </Button>
-            </CardActions>
-          </Card>
+              <div className={classes.formcontainer}>
+                <form className={classes.form} noValidate autoComplete="off">
+                  <TextField
+                    id="outlined-multiline-static"
+                    multiline
+                    rows={4}
+                    defaultValue="Write a message"
+                    variant="outlined"
+                    style={{ width: 400, margin: 14 }}
+                  />
+                </form>
+                <CardActions>
+                  <Button variant="outlined" size="small">
+                    Send message
+                  </Button>
+                </CardActions>
+              </div>
+            </Card>
+          </div>
         </Grid>
       </Grid>
     </div>
@@ -66,12 +93,3 @@ function DetailedPost() {
 }
 
 export default DetailedPost;
-
-// {
-//   id: 8,
-//   img:
-//     "https://images.pexels.com/photos/2065695/pexels-photo-2065695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-//   title: "Air Jordan 1",
-//   price: "$350",
-//   featured: false,
-// },
