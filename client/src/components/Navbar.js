@@ -7,6 +7,7 @@ import ProfileMenu from "./ProfileMenu";
 import NotificationMenu from "./NotificationMenu";
 import FavouriteMenu from "./FavouriteMenu";
 import Searchbar from "./Searchbar";
+import SigninMenu from "./SigninMenu";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -48,9 +49,12 @@ function Navbar() {
         <Link className="navbar__links" to="register">
           <li>Register</li>
         </Link>
-        <Link className="navbar__links" to="signin">
+        {/* <Link className="navbar__links" to="signin">
           <li>Sign In</li>
-        </Link>
+        </Link> */}
+        <li>
+          <SigninMenu />
+        </li>
         <li>
           <FavouriteMenu />
         </li>

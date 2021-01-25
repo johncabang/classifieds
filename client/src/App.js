@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "./components/pages/Home";
 import Register from "./components/pages/Register";
+import AdminSignin from "./components/pages/AdminSignin";
 import Signin from "./components/pages/Signin";
 import Post from "./components/pages/Post";
 import Navbar from "./components/Navbar";
@@ -61,6 +62,7 @@ function App() {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/register" component={Register} />
+            <Route path="/adminsignin" component={AdminSignin} />
             <Route path="/signin" component={Signin} />
             <Route path="/profile" component={Profile} />
             <Route path="/myads" component={MyAds} />

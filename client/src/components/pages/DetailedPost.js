@@ -1,17 +1,17 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+
 import { makeStyles } from "@material-ui/core/styles";
 
 import {
   Button,
   Card,
-  CardActions,
   CardContent,
   CardMedia,
   Grid,
   TextField,
   Typography,
 } from "@material-ui/core/";
-import { useParams } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -32,6 +32,7 @@ const useStyles = makeStyles(() => ({
   formcontainer: {
     display: "flex",
     flexDirection: "column",
+    padding: 14,
   },
 }));
 function DetailedPost() {
@@ -44,7 +45,7 @@ function DetailedPost() {
       <Grid container spacing={0} className={classes.root}>
         <Grid item xs={12}>
           {/* <Typography variant="h5">Detailed - {id}</Typography> */}
-          {console.log("this is from detailed post " + id)}
+          {console.log("This is from DetailedPost.js " + id)}
           <div className={classes.cardcontainer}>
             <Card className={classes.card}>
               <CardMedia
@@ -67,6 +68,7 @@ function DetailedPost() {
                   Jordan Wings logo and featured Nike Air.
                 </Typography>
               </CardContent>
+
               <div className={classes.formcontainer}>
                 <form className={classes.form} noValidate autoComplete="off">
                   <TextField
@@ -75,14 +77,16 @@ function DetailedPost() {
                     rows={4}
                     defaultValue="Write a message"
                     variant="outlined"
-                    style={{ width: 400, margin: 14 }}
+                    style={{ width: "100%" }}
                   />
                 </form>
-                <CardActions>
-                  <Button variant="outlined" size="small">
-                    Send message
-                  </Button>
-                </CardActions>
+                <Button
+                  variant="outlined"
+                  size="small"
+                  style={{ marginTop: 10, marginBottom: 30 }}
+                >
+                  Send message
+                </Button>
               </div>
             </Card>
           </div>
