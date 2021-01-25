@@ -105,6 +105,9 @@ const useStyles = makeStyles(() => ({
   gridListTileBar: {
     background: "transparent",
   },
+  image: {
+    width: "100%",
+  },
 }));
 
 function Posts() {
@@ -127,7 +130,11 @@ function Posts() {
                 rows={tile.featured ? 2 : 1}
               >
                 <Link to={`/posts/${tile.id}`}>
-                  <img src={tile.img} alt={tile.title} />
+                  <img
+                    src={tile.img}
+                    alt={tile.title}
+                    className={classes.image}
+                  />
                 </Link>
                 <GridListTileBar
                   title={tile.title}
