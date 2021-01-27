@@ -27,16 +27,10 @@ const theme = createMuiTheme({
   palette: {
     // type: "dark",
     primary: {
-      light: "#e0e0e0",
       main: "#616161",
-      dark: "#212121",
-      contrastText: "#fff",
     },
     secondary: {
-      light: "#ff7961",
       main: "#f44336",
-      dark: "#ba000d",
-      contrastText: "#000",
     },
   },
 });
@@ -44,10 +38,8 @@ const theme = createMuiTheme({
 const useStyles = makeStyles(() => ({
   root: {
     backgroundColor: "#F8F9F9",
-    // textAlign: "center",
     borderTop: "6px solid #ff7961",
     borderBottom: "6px solid #ff7961",
-    // position: "relative",
   },
 }));
 

@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Signin(props) {
+function Signin() {
   const classes = useStyles();
 
   return (

@@ -5,26 +5,30 @@ import { Box, Button, Typography } from "@material-ui/core";
 
 import ProfileMenu from "./ProfileMenu";
 import NotificationMenu from "./NotificationMenu";
-import FavouriteMenu from "./FavouriteMenu";
 import Searchbar from "./Searchbar";
 import SigninMenu from "./SigninMenu";
+import IconButton from "@material-ui/core/IconButton";
+
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 const useStyles = makeStyles(() => ({
   root: {
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: "white",
+    paddingLeft: 300,
+    paddingRight: 300,
   },
   links: {
     display: "flex",
     justifyContent: "space-around",
-    width: "22%",
     listStyle: "none",
     alignItems: "center",
   },
   searchbar: {
-    position: "absolute",
+    display: "flex",
+    justifyContent: "center",
   },
 }));
 
@@ -46,17 +50,23 @@ function Navbar() {
         <Searchbar />
       </Box>
       <ul className={classes.links}>
-        <Link className="navbar__links" to="register">
-          <li>Register</li>
-        </Link>
-        {/* <Link className="navbar__links" to="signin">
-          <li>Sign In</li>
-        </Link> */}
+        <li>
+          <Button
+            component={Link}
+            to="/register"
+            type="submit"
+            style={{ textTransform: "none" }}
+          >
+            Register
+          </Button>
+        </li>
         <li>
           <SigninMenu />
         </li>
         <li>
-          <FavouriteMenu />
+          <IconButton component={Link} to="/favourites" type="submit">
+            <FavoriteBorderIcon />
+          </IconButton>
         </li>
         <li>
           <NotificationMenu />
@@ -64,10 +74,11 @@ function Navbar() {
         <li>
           <ProfileMenu />
         </li>
-
-        <Link className="navbar__links navbar__post" to="post">
+        <li>
           <Button
-            size="small"
+            component={Link}
+            to="/post"
+            type="submit"
             style={{
               textTransform: "none",
               backgroundColor: "#ff7961",
@@ -76,7 +87,7 @@ function Navbar() {
           >
             Post AD
           </Button>
-        </Link>
+        </li>
       </ul>
     </div>
   );

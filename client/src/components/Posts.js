@@ -76,6 +76,8 @@ const tileData = [
     img:
       "https://images.pexels.com/photos/2065695/pexels-photo-2065695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     title: "Air Jordan 1",
+    description:
+      "The Air Jordan 1 High debuted in 1985 as the first signature sneaker developed by Nike for Michael Jordan. The Peter Moore designed performance basketball sneaker featured a simple Nike Dunk inspired design that incorporated the Nike Swoosh and the Jordan Wings logo and featured Nike Air.",
     price: "$350",
     featured: false,
   },
@@ -85,16 +87,17 @@ const useStyles = makeStyles(() => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "center",
+    justifyContent: "space-around",
     backgroundColor: "#F8F9F9",
-    // overflow: "hidden",
-    marginLeft: 275,
-    marginRight: 275,
+    overflow: "hidden",
+    marginLeft: 300,
+    marginRight: 300,
   },
   listSubHeader: {
     marginTop: 20,
     marginBottom: 20,
     fontSize: "18px",
+    padding: 0,
   },
   gridList: {
     width: "100%",

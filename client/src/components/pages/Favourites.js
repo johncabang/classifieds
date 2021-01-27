@@ -1,12 +1,27 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Grid, Typography } from "@material-ui/core/";
 
-import { Typography } from "@material-ui/core/";
+const useStyles = makeStyles(() => ({
+  root: {
+    minHeight: "80vh",
+    alignItems: "center",
+    display: "flex",
+    justifyContent: "center",
+  },
+}));
 
 function Favourites() {
+  const classes = useStyles();
+
   return (
-    <>
-      <Typography variant="h5">Favourites</Typography>
-    </>
+    <div className={classes.root}>
+      <Grid container spacing={0}>
+        <Grid item xs={12}>
+          <Typography variant="h5">Favourites!</Typography>
+        </Grid>
+      </Grid>
+    </div>
   );
 }
 

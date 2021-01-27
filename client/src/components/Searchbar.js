@@ -16,11 +16,12 @@ function Searchbar() {
     <div className={classes.root}>
       <FormControl fullWidth variant="outlined">
         <TextField
-          placeholder="search for anything..."
           id="outlined-size-normal"
+          // label="search for anything..."
+          placeholder="search for anything..."
           variant="outlined"
           size="small"
-          style={{ width: "40vh" }}
+          style={{ width: "100%" }}
           InputProps={{
             startAdornment: (
               <InputAdornment>

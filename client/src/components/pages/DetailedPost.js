@@ -75,18 +75,24 @@ function DetailedPost() {
                     id="outlined-multiline-static"
                     multiline
                     rows={4}
-                    defaultValue="Write a message"
+                    label="Write a message"
                     variant="outlined"
                     style={{ width: "100%" }}
                   />
+                  <Button
+                    type="submit"
+                    variant="outlined"
+                    size="small"
+                    style={{
+                      width: "100%",
+                      marginTop: 10,
+                      marginBottom: 30,
+                      textTransform: "none",
+                    }}
+                  >
+                    Send message
+                  </Button>
                 </form>
-                <Button
-                  variant="outlined"
-                  size="small"
-                  style={{ marginTop: 10, marginBottom: 30 }}
-                >
-                  Send message
-                </Button>
               </div>
             </Card>
           </div>

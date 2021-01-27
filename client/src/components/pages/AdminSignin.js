@@ -5,8 +5,6 @@ import {
   Button,
   Checkbox,
   FormControlLabel,
-  Grid,
-  Link,
   Paper,
   TextField,
   Typography,
@@ -62,7 +60,7 @@ function AdminSignin() {
       <div className={classes.root}>
         <Paper className={classes.paper}>
           <Typography component="h1" variant="h5">
-            Admin Sign In
+            Admin
           </Typography>
           <form className={classes.form} noValidate>
             <TextField

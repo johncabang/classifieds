@@ -26,20 +26,19 @@ function SigninMenu() {
 
   return (
     <div>
-      {/* <Button
+      <Button
         className={classes.submit}
         onClick={handleClick}
         type="submit"
-        fullWidth
-        variant="contained"
+        style={{ textTransform: "none" }}
       >
         Sign in
-      </Button> */}
-      <Link className={classes.submit} onClick={handleClick}>
+      </Button>
+      {/* <Link className={classes.submit} onClick={handleClick}>
         <li>Sign In</li>
-      </Link>
+      </Link> */}
       <Menu
-        id="favourite-menu"
+        id="signin-menu"
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
