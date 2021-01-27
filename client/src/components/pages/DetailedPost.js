@@ -41,7 +41,7 @@ function DetailedPost() {
   const { id } = useParams();
 
   return (
-    <div>
+    <>
       <Grid container spacing={0} className={classes.root}>
         <Grid item xs={12}>
           {/* <Typography variant="h5">Detailed - {id}</Typography> */}
@@ -83,6 +83,7 @@ function DetailedPost() {
                     type="submit"
                     variant="outlined"
                     size="small"
+                    color="primary"
                     style={{
                       width: "100%",
                       marginTop: 10,
@@ -98,7 +99,7 @@ function DetailedPost() {
           </div>
         </Grid>
       </Grid>
-    </div>
+    </>
   );
 }
 

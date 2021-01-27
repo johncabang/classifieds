@@ -38,7 +38,7 @@ function NotificationMenu() {
         onClose={handleClose}
       >
         <MenuItem component={Link} to="/notifications" onClick={handleClose}>
-          Notifications
+          7 New Notifications
         </MenuItem>
       </Menu>
     </div>

@@ -9,6 +9,10 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     justifyContent: "center",
   },
+  favouritescontainer: {
+    display: "flex",
+    justifyContent: "center",
+  },
 }));
 
 function Favourites() {
@@ -18,7 +22,9 @@ function Favourites() {
     <div className={classes.root}>
       <Grid container spacing={0}>
         <Grid item xs={12}>
-          <Typography variant="h5">Favourites!</Typography>
+          <div className={classes.favouritescontainer}>
+            <Typography variant="h5">Favourites!</Typography>
+          </div>
         </Grid>
       </Grid>
     </div>

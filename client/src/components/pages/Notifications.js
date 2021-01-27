@@ -4,17 +4,23 @@ import { Grid, Typography } from "@material-ui/core/";
 
 const useStyles = makeStyles(() => ({
   root: {
-    minHeight: "80vh",
-    alignItems: "center",
-    display: "flex",
-    justifyContent: "center",
+    // minHeight: "80vh",
+    // alignItems: "center",
   },
 }));
 
 function Notifications() {
   const classes = useStyles();
   return (
-    <Grid container className={classes.root} spacing={0}>
+    <Grid
+      container
+      className={classes.root}
+      direction="column"
+      alignItems="center"
+      justify="center"
+      style={{ minHeight: "80vh" }}
+      spacing={0}
+    >
       <Grid item xs={12}>
         <Typography variant="h5">No new notifications!</Typography>
         <Typography variant="body2">
