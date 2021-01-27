@@ -15,25 +15,9 @@ import Notifications from "./components/pages/Notifications";
 import Favourites from "./components/pages/Favourites";
 import DetailedPost from "./components/pages/DetailedPost";
 
-import {
-  makeStyles,
-  createMuiTheme,
-  ThemeProvider,
-} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 import "./App.css";
-
-const theme = createMuiTheme({
-  palette: {
-    // type: "dark",
-    primary: {
-      main: "#616161",
-    },
-    secondary: {
-      main: "#f44336",
-    },
-  },
-});
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -49,24 +33,22 @@ function App() {
   return (
     <Router>
       <div className={classes.root}>
-        <ThemeProvider theme={theme}>
-          <Navbar />
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/register" component={Register} />
-            <Route path="/adminsignin" component={AdminSignin} />
-            <Route path="/signin" component={Signin} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/myads" component={MyAds} />
-            <Route path="/myorders" component={MyOrders} />
-            <Route path="/settings" component={Settings} />
-            <Route path="/notifications" component={Notifications} />
-            <Route path="/favourites" component={Favourites} />
-            <Route path="/post" component={Post} />
-            <Route path="/posts/:id" component={DetailedPost} />
-          </Switch>
-          <Footer />
-        </ThemeProvider>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/register" component={Register} />
+          <Route path="/adminsignin" component={AdminSignin} />
+          <Route path="/signin" component={Signin} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/myads" component={MyAds} />
+          <Route path="/myorders" component={MyOrders} />
+          <Route path="/settings" component={Settings} />
+          <Route path="/notifications" component={Notifications} />
+          <Route path="/favourites" component={Favourites} />
+          <Route path="/post" component={Post} />
+          <Route path="/posts/:id" component={DetailedPost} />
+        </Switch>
+        <Footer />
       </div>
     </Router>
   );
