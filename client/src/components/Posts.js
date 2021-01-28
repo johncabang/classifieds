@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Post from "./Post";
+
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Button,
@@ -10,16 +12,19 @@ import {
   GridListTileBar,
   IconButton,
   ListSubheader,
+  Typography,
 } from "@material-ui/core";
 import MessageOutlinedIcon from "@material-ui/icons/MessageOutlined";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
-const tileData = [
+const items = [
   {
     id: 1,
     img:
       "https://images.pexels.com/photos/3661197/pexels-photo-3661197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     title: "Zoo Animal Figurines",
+    description:
+      "Plastic wild animals toys make your baby toddlers to have immersive experience of the wildlife in the wild. Realistic african animals playset is designed for little hands and child' imagination. The parent-child safari wild animals world set includes a assortment of amazing plastic animals in realistic colors. Your children will love this set of friendly lovable animals figures.",
     price: "$35",
     featured: true,
   },
@@ -28,6 +33,8 @@ const tileData = [
     img:
       "https://images.pexels.com/photos/220639/pexels-photo-220639.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     title: "Automotive Tools",
+    description:
+      "They include things like screwdrivers, hammers, pliers, wrenches, and socket sets. Other standard tools that can be used to repair vehicles include a jack, jack stands, funnel, multimeters, fuses, torque wrenches, breaker bars, socket adaptors, clamps, and more.",
     price: "$60",
     featured: false,
   },
@@ -36,6 +43,8 @@ const tileData = [
     img:
       "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     title: "Bicycle",
+    description:
+      "A bicycle (or bike) is a small, human powered land vehicle with a seat, two wheels, two pedals, and a metal chain connected to cogs on the pedals and rear wheel. A frame gives the bike strength, and the other parts are attached to the frame. ... Bicycling uses less energy per mile than any other human transport.",
     price: "$105",
     featured: false,
   },
@@ -44,6 +53,8 @@ const tileData = [
     img:
       "https://images.pexels.com/photos/159613/ghettoblaster-radio-recorder-boombox-old-school-159613.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     title: "Classic Boombox",
+    description:
+      "Beginning with the first portable radio-and-cassette players developed around 1977, the typical boombox incorporated an AM/FM receiver, an amplifier, two speakers, and a cassette or CD player, all built into a single carrying case.",
     price: "$55",
     featured: false,
   },
@@ -52,6 +63,8 @@ const tileData = [
     img:
       "https://images.pexels.com/photos/1422220/pexels-photo-1422220.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     title: "Lot of Cameras",
+    description:
+      "Classic camera values range from worthless up to $8,000 or more, depending on factors like brand, condition, film format and popularity. Many are worth around $15, though it's impossible to place an average value on classic cameras. The most expensive camera ever sold at auction was a Leica 0-series No.",
     price: "$120",
     featured: false,
   },
@@ -60,6 +73,8 @@ const tileData = [
     img:
       "https://images.pexels.com/photos/191360/pexels-photo-191360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     title: "Doll House",
+    description:
+      "A dollhouse or doll's house is a toy home made in miniature. Since the early 20th century ... Enthusiasts share images online and use Internet forums, blogs and other online social media to share information about dollhouses and miniatures.",
     price: "$40",
     featured: true,
   },
@@ -68,6 +83,8 @@ const tileData = [
     img:
       "https://images.pexels.com/photos/4219892/pexels-photo-4219892.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     title: "Original Playstation",
+    description:
+      "The PlayStation, one of a new generation of 32-bit consoles, signaled Sony's rise to power in the video game world. Also known as the PS One, the PlayStation used compact discs (CDs), heralding the video game industry's move away from cartridges.",
     price: "$85",
     featured: false,
   },
@@ -118,65 +135,25 @@ function Posts() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={0}>
-        <Grid item xs={12}>
-          <GridList cellHeight={200} className={classes.gridList} cols={4}>
-            <GridListTile key="Subheader" cols={4}>
-              <ListSubheader className={classes.listSubHeader} component="div">
-                What's popular right now
-              </ListSubheader>
-            </GridListTile>
-            {tileData.map((tile) => (
-              <GridListTile
-                key={tile.id}
-                cols={tile.featured ? 4 : 1}
-                rows={tile.featured ? 2 : 1}
-              >
-                <Link to={`/posts/${tile.id}`}>
-                  <img
-                    src={tile.img}
-                    alt={tile.title}
-                    className={classes.image}
-                  />
-                </Link>
-                <GridListTileBar
-                  title={tile.title}
-                  subtitle={<span>{tile.price}</span>}
-                  actionIcon={
-                    <IconButton
-                      aria-label={`tile.message`}
-                      className={classes.icon}
-                    >
-                      <MessageOutlinedIcon />
-                    </IconButton>
-                  }
-                />
-                <GridListTileBar
-                  className={classes.gridListTileBar}
-                  titlePosition="top"
-                  actionIcon={
-                    <IconButton
-                      aria-label={`info about ${tile.title}`}
-                      className={classes.icon}
-                    >
-                      <FavoriteBorderIcon />
-                    </IconButton>
-                  }
-                />
-              </GridListTile>
-            ))}
-          </GridList>
-        </Grid>
-        <Grid item xs={12}>
-          <Button
-            variant="outlined"
-            size="small"
-            style={{ textTransform: "none", margin: "70px 0 70px 0" }}
-          >
-            Load More
-          </Button>
-        </Grid>
-      </Grid>
+      <Typography>What's popular right now</Typography>
+
+      {items.map((item) => (
+        <Post
+          img={item.img}
+          title={item.title}
+          description={item.description}
+          price={item.price}
+          featured={item.featured}
+        />
+      ))}
+      <Button
+        className={classes.button}
+        variant="outlined"
+        size="small"
+        style={{ textTransform: "none", margin: "70px 0 70px 0" }}
+      >
+        Load More
+      </Button>
     </div>
   );
 }

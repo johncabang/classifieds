@@ -20,11 +20,16 @@ const useStyles = makeStyles(() => ({
     paddingLeft: 300,
     paddingRight: 300,
   },
+  logo: {
+    color: "inherit",
+    textDecoration: "none",
+  },
   links: {
     display: "flex",
     justifyContent: "space-around",
     listStyle: "none",
     alignItems: "center",
+    whiteSpace: "nowrap",
   },
   searchbar: {
     display: "flex",
@@ -37,7 +42,7 @@ function Navbar() {
 
   return (
     <div className={classes.root}>
-      <Link className="navbar__links" to="/">
+      <Link className={classes.logo} to="/">
         <Typography
           variant="h5"
           component="h5"

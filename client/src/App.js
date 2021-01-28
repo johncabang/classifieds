@@ -4,7 +4,7 @@ import Home from "./components/pages/Home";
 import Register from "./components/pages/Register";
 import AdminSignin from "./components/pages/AdminSignin";
 import Signin from "./components/pages/Signin";
-import Post from "./components/pages/Post";
+import Post from "./components/pages/PostAd";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Profile from "./components/pages/Profile";

@@ -4,8 +4,8 @@ import { Grid, Typography } from "@material-ui/core/";
 
 const useStyles = makeStyles(() => ({
   root: {
-    minHeight: "80vh",
-    alignItems: "center",
+    // minHeight: "80vh",
+    // alignItems: "center",
   },
 }));
 
