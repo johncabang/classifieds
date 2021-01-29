@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 
 import { makeStyles } from "@material-ui/core/styles";
 import {
-  Button,
   Card,
   CardActionArea,
   CardMedia,
   CardContent,
+  IconButton,
   Typography,
-  CardActions,
 } from "@material-ui/core";
 
 import MessageOutlinedIcon from "@material-ui/icons/MessageOutlined";
@@ -17,23 +16,29 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
-    minHeight: 500,
+    maxWidth: 220,
     marginTop: 20,
-    marginBottom: 20,
+    marginRight: 20,
   },
   media: {
     height: 180,
+  },
+  cardfooter: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    alignSelf: "flex-end",
+    padding: 20,
   },
 });
 
 function Post(props) {
   const classes = useStyles();
-  const { id, img, title, price, featured, description } = props;
+  const { id, img, title, price, description } = props;
 
   return (
-    <div>
-      <Card className={classes.root}>
+    <div className={classes.root}>
+      <Card>
         <Link
           to={`/posts/${id}`}
           style={{ color: "inherit", textDecoration: "none" }}
@@ -42,28 +47,25 @@ function Post(props) {
             <CardMedia
               className={classes.media}
               component="img"
-              alt="Contemplative Reptile"
-              // height="170"
               image={img}
-              title="Contemplative Reptile"
+              title={title}
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
+              <Typography gutterBottom variant="body1" component="p">
                 {title}
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {description}
               </Typography>
             </CardContent>
           </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              {price}
-            </Button>
-            <FavoriteBorderIcon />
-            <MessageOutlinedIcon />
-          </CardActions>
         </Link>
+        <div className={classes.cardfooter}>
+          {price}
+          <IconButton aria-label="add to favorites">
+            <FavoriteBorderIcon />
+          </IconButton>
+          <IconButton aria-label="leave a message">
+            <MessageOutlinedIcon />
+          </IconButton>
+        </div>
       </Card>
     </div>
   );

@@ -3,7 +3,7 @@ import React from "react";
 import Post from "./Post";
 
 import { makeStyles } from "@material-ui/core/styles";
-import { Button, Typography } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 
 const items = [
   {
@@ -90,31 +90,16 @@ const items = [
 
 const useStyles = makeStyles(() => ({
   root: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    backgroundColor: "#F8F9F9",
-    overflow: "hidden",
     marginLeft: 300,
     marginRight: 300,
   },
-  listSubHeader: {
-    marginTop: 20,
-    marginBottom: 20,
-    fontSize: "18px",
-    padding: 0,
+  posts: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "flex-start",
   },
-  gridList: {
-    width: "100%",
-  },
-  icon: {
-    color: "#fff",
-  },
-  gridListTileBar: {
-    background: "transparent",
-  },
-  image: {
-    width: "100%",
+  button: {
+    display: "flex",
   },
 }));
 
@@ -123,26 +108,28 @@ function Posts() {
 
   return (
     <div className={classes.root}>
-      <Typography>What's popular right now</Typography>
-
-      {items.map((item) => (
-        <Post
-          key={item.id}
-          img={item.img}
-          title={item.title}
-          description={item.description}
-          price={item.price}
-          featured={item.featured}
-        />
-      ))}
-      <Button
-        className={classes.button}
-        variant="outlined"
-        size="small"
-        style={{ textTransform: "none", margin: "70px 0 70px 0" }}
-      >
-        Load More
-      </Button>
+      <div className={classes.posts}>
+        {items.map((item) => (
+          <Post
+            key={item.id}
+            id={item.id}
+            img={item.img}
+            title={item.title}
+            description={item.description}
+            price={item.price}
+            featured={item.featured}
+          />
+        ))}
+      </div>
+      <div className={classes.button}>
+        <Button
+          variant="outlined"
+          size="small"
+          style={{ textTransform: "none", margin: "70px 0 70px 0" }}
+        >
+          Load More
+        </Button>
+      </div>
     </div>
   );
 }

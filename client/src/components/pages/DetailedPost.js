@@ -35,13 +35,16 @@ const useStyles = makeStyles(() => ({
     padding: 14,
   },
 }));
-function DetailedPost() {
+function DetailedPost(props) {
+  const { img, title, price, description } = props;
+
   const classes = useStyles();
 
   const { id } = useParams();
 
   return (
     <>
+      {console.log("This is DetailedPost.js props " + img)}
       <Grid container spacing={0} className={classes.root}>
         <Grid item xs={12}>
           {/* <Typography variant="h5">Detailed - {id}</Typography> */}
