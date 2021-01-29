@@ -16,12 +16,16 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 const useStyles = makeStyles({
   root: {
+    display: "flex",
+    flexWrap: "wrap",
+  },
+  posts: {
+    marginTop: 40,
     maxWidth: 220,
-    marginTop: 20,
-    marginRight: 20,
+    padding: 10,
   },
   media: {
-    height: 180,
+    height: 200,
   },
   cardfooter: {
     display: "flex",
@@ -32,41 +36,46 @@ const useStyles = makeStyles({
   },
 });
 
-function Post(props) {
+function Post({ items }) {
   const classes = useStyles();
-  const { id, img, title, price, description } = props;
 
   return (
     <div className={classes.root}>
-      <Card>
-        <Link
-          to={`/posts/${id}`}
-          style={{ color: "inherit", textDecoration: "none" }}
-        >
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              component="img"
-              image={img}
-              title={title}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="body1" component="p">
-                {title}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Link>
-        <div className={classes.cardfooter}>
-          {price}
-          <IconButton aria-label="add to favorites">
-            <FavoriteBorderIcon />
-          </IconButton>
-          <IconButton aria-label="leave a message">
-            <MessageOutlinedIcon />
-          </IconButton>
+      {items.map((item) => (
+        <div key={item.id}>
+          <div className={classes.posts}>
+            <Card>
+              <Link
+                to={`/posts/${item.id}`}
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    component="img"
+                    image={item.img}
+                    title={item.title}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="body1" component="p">
+                      {item.title}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Link>
+              <div className={classes.cardfooter}>
+                {item.price}
+                <IconButton aria-label="add to favorites">
+                  <FavoriteBorderIcon />
+                </IconButton>
+                <IconButton aria-label="leave a message">
+                  <MessageOutlinedIcon />
+                </IconButton>
+              </div>
+            </Card>
+          </div>
         </div>
-      </Card>
+      ))}
     </div>
   );
 }

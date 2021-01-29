@@ -36,7 +36,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 function DetailedPost(props) {
-  const { img, title, price, description } = props;
+  // const { img, title, price, description } = props;
 
   const classes = useStyles();
 
@@ -44,11 +44,11 @@ function DetailedPost(props) {
 
   return (
     <>
-      {console.log("This is DetailedPost.js props " + img)}
+      {console.log("This is from DetailedPost.js " + id)}
+
       <Grid container spacing={0} className={classes.root}>
         <Grid item xs={12}>
           {/* <Typography variant="h5">Detailed - {id}</Typography> */}
-          {console.log("This is from DetailedPost.js " + id)}
           <div className={classes.cardcontainer}>
             <Card className={classes.card}>
               <CardMedia

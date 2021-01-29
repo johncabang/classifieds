@@ -17,8 +17,8 @@ const useStyles = makeStyles(() => ({
     justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: "white",
-    paddingLeft: 300,
-    paddingRight: 300,
+    paddingLeft: "15%",
+    paddingRight: "15%",
   },
   logo: {
     color: "inherit",
@@ -30,10 +30,6 @@ const useStyles = makeStyles(() => ({
     listStyle: "none",
     alignItems: "center",
     whiteSpace: "nowrap",
-  },
-  searchbar: {
-    display: "flex",
-    justifyContent: "center",
   },
 }));
 
@@ -51,9 +47,7 @@ function Navbar() {
           classifieds
         </Typography>
       </Link>
-      <Box className={classes.searchbar}>
-        <Searchbar />
-      </Box>
+      <Searchbar />
       <ul className={classes.links}>
         <li>
           <Button
