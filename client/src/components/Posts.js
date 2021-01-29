@@ -13,8 +13,10 @@ const useStyles = makeStyles(() => ({
 }));
 
 function Posts() {
+  // Visible items set to 5 (default)
   const [visibleItems, setVisibleItems] = useState(5);
 
+  // Set visible items to current amount + 5
   const handleClick = () => {
     setVisibleItems((prevVisibleItems) => prevVisibleItems + 5);
   };
@@ -122,11 +124,20 @@ function Posts() {
     },
   ]);
 
+  const handleDelete = (id) => {
+    const newItems = items.filter((item) => item.id !== id);
+    setItems(newItems);
+  };
+
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Post items={items} visibleItems={visibleItems} />
+      <Post
+        items={items}
+        visibleItems={visibleItems}
+        handleDelete={handleDelete}
+      />
       <Button
         variant="outlined"
         size="small"

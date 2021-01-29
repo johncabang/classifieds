@@ -11,8 +11,9 @@ import {
   Typography,
 } from "@material-ui/core";
 
-import MessageOutlinedIcon from "@material-ui/icons/MessageOutlined";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import MessageOutlinedIcon from "@material-ui/icons/MessageOutlined";
+import DeleteOutlinedIcon from "@material-ui/icons/DeleteOutlined";
 
 const useStyles = makeStyles({
   root: {
@@ -36,7 +37,7 @@ const useStyles = makeStyles({
   },
 });
 
-function Post({ items, visibleItems }) {
+function Post({ items, visibleItems, handleDelete }) {
   const classes = useStyles();
 
   return (
@@ -68,8 +69,11 @@ function Post({ items, visibleItems }) {
                 <IconButton aria-label="add to favorites">
                   <FavoriteBorderIcon />
                 </IconButton>
-                <IconButton aria-label="leave a message">
-                  <MessageOutlinedIcon />
+                <IconButton
+                  aria-label="leave a message"
+                  onClick={() => handleDelete(item.id)}
+                >
+                  <DeleteOutlinedIcon />
                 </IconButton>
               </div>
             </Card>
