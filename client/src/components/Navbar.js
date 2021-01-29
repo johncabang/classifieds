@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Button, Typography } from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 
 import ProfileMenu from "./ProfileMenu";
 import NotificationMenu from "./NotificationMenu";
@@ -19,6 +19,7 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "white",
     paddingLeft: "15%",
     paddingRight: "15%",
+    height: 80,
   },
   logo: {
     color: "inherit",

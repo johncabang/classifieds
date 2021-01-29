@@ -13,6 +13,12 @@ const useStyles = makeStyles(() => ({
 }));
 
 function Posts() {
+  const [visibleItems, setVisibleItems] = useState(5);
+
+  const handleClick = () => {
+    setVisibleItems((prevVisibleItems) => prevVisibleItems + 5);
+  };
+
   const [items, setItems] = useState([
     {
       id: 1,
@@ -94,17 +100,38 @@ function Posts() {
       price: "$350",
       featured: false,
     },
+    {
+      id: 9,
+      img:
+        "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      title: "iPhone 11 Pro",
+      description:
+        "The iPhone 11 Pro and iPhone 11 Pro Max are smartphones designed, developed and marketed by Apple Inc. They are the 13th-generation flagship iPhones, succeeding the iPhone XS and iPhone XS Max, respectively. Apple CEO Tim Cook unveiled the devices alongside a lower-end model, the iPhone 11, on September 10, 2019, at the Steve Jobs Theater at Apple Park.",
+      price: "$750",
+      featured: false,
+    },
+    {
+      id: 10,
+      img:
+        "https://images.pexels.com/photos/4070966/pexels-photo-4070966.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      title: "Casio AE1200WH-1A",
+      description:
+        "The Casio AE1200 has a purely digital dial whose presentation is via a liquid crystal display (LCD). ... This overlay divides the face into the primary display, a world map with time zone, an alarm indicator and finally a digital version of an analogue watch face.",
+      price: "$20",
+      featured: false,
+    },
   ]);
 
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Post items={items} />
+      <Post items={items} visibleItems={visibleItems} />
       <Button
         variant="outlined"
         size="small"
         style={{ textTransform: "none", margin: "70px 0 70px 0" }}
+        onClick={handleClick}
       >
         Load More
       </Button>

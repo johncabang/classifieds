@@ -36,12 +36,12 @@ const useStyles = makeStyles({
   },
 });
 
-function Post({ items }) {
+function Post({ items, visibleItems }) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      {items.map((item) => (
+      {items.slice(0, visibleItems).map((item) => (
         <div key={item.id}>
           <div className={classes.posts}>
             <Card>

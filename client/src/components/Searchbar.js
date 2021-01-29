@@ -5,7 +5,8 @@ import SearchIcon from "@material-ui/icons/Search";
 
 const useStyles = makeStyles(() => ({
   root: {
-    marginLeft: 0,
+    // display: "flex",
+    // justifyContent: "center",
   },
 }));
 
@@ -17,7 +18,6 @@ function Searchbar() {
       <FormControl fullWidth variant="outlined">
         <TextField
           id="outlined-size-normal"
-          // label="search for anything..."
           placeholder="search for anything..."
           variant="outlined"
           size="small"

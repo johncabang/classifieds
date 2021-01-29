@@ -48,7 +48,6 @@ function DetailedPost(props) {
 
       <Grid container spacing={0} className={classes.root}>
         <Grid item xs={12}>
-          {/* <Typography variant="h5">Detailed - {id}</Typography> */}
           <div className={classes.cardcontainer}>
             <Card className={classes.card}>
               <CardMedia
