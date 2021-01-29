@@ -1,21 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import Post from "./Post";
 
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  Button,
-  Grid,
-  GridList,
-  GridListTile,
-  GridListTileBar,
-  IconButton,
-  ListSubheader,
-  Typography,
-} from "@material-ui/core";
-import MessageOutlinedIcon from "@material-ui/icons/MessageOutlined";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import { Button, Typography } from "@material-ui/core";
 
 const items = [
   {
@@ -139,6 +127,7 @@ function Posts() {
 
       {items.map((item) => (
         <Post
+          key={item.id}
           img={item.img}
           title={item.title}
           description={item.description}
