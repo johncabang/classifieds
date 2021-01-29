@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import Post from "./Post";
+import useFetch from "../hooks/useFetch";
 
 import { makeStyles } from "@material-ui/core/styles";
+import LinearProgress from "@material-ui/core/LinearProgress";
+
 import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
@@ -13,6 +16,9 @@ const useStyles = makeStyles(() => ({
 }));
 
 function Posts() {
+  const { data: items, isLoading, error } = useFetch(
+    "http://localhost:8000/items"
+  );
   // Visible items set to 5 (default)
   const [visibleItems, setVisibleItems] = useState(5);
 
@@ -21,33 +27,27 @@ function Posts() {
     setVisibleItems((prevVisibleItems) => prevVisibleItems + 5);
   };
 
-  const [items, setItems] = useState(null);
-
-  const handleDelete = (id) => {
-    const newItems = items.filter((item) => item.id !== id);
-    setItems(newItems);
-  };
-
-  useEffect(() => {
-    fetch("http://localhost:8000/items")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        console.log(data);
-        setItems(data);
-      });
-  }, []);
+  // Delete item function
+  // const handleDelete = (id) => {
+  //   const newItems = items.filter((item) => item.id !== id);
+  //   setItems(newItems);
+  // };
 
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
+      {error && <div>{error}</div>}
+      {isLoading && (
+        <div>
+          <LinearProgress color="secondary" />
+        </div>
+      )}
       {items && (
         <Post
           items={items}
           visibleItems={visibleItems}
-          handleDelete={handleDelete}
+          // handleDelete={handleDelete}
         />
       )}
       <Button
