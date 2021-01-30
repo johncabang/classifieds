@@ -12,6 +12,7 @@ const useStyles = makeStyles(() => ({
   root: {
     marginLeft: "15%",
     marginRight: "15%",
+    minHeight: "80vh",
   },
 }));
 

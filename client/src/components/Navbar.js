@@ -4,10 +4,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Button, Typography } from "@material-ui/core";
 
 import ProfileMenu from "./ProfileMenu";
-import NotificationMenu from "./NotificationMenu";
+// import NotificationMenu from "./NotificationMenu";
 import Searchbar from "./Searchbar";
 import SigninMenu from "./SigninMenu";
 import IconButton from "@material-ui/core/IconButton";
+import Badge from "@material-ui/core/Badge";
+import NotificationsNoneOutlinedIcon from "@material-ui/icons/NotificationsNoneOutlined";
 
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
@@ -69,7 +71,19 @@ function Navbar() {
           </IconButton>
         </li>
         <li>
-          <NotificationMenu />
+          <IconButton
+            component={Link}
+            to="/notifications"
+            type="submit"
+            aria-label="show 7 new notifications"
+            aria-controls="notification-menu"
+            aria-haspopup="true"
+            // onClick={handleClick}
+          >
+            <Badge badgeContent={7} color="secondary">
+              <NotificationsNoneOutlinedIcon />
+            </Badge>
+          </IconButton>
         </li>
         <li>
           <ProfileMenu />

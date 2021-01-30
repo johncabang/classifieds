@@ -38,9 +38,9 @@ function ProfileMenu() {
         <MenuItem component={Link} to="/myads" onClick={handleClose}>
           My Ads
         </MenuItem>
-        <MenuItem component={Link} to="/myorders" onClick={handleClose}>
+        {/* <MenuItem component={Link} to="/myorders" onClick={handleClose}>
           My Orders
-        </MenuItem>
+        </MenuItem> */}
         <MenuItem component={Link} to="/settings" onClick={handleClose}>
           Account Settings
         </MenuItem>

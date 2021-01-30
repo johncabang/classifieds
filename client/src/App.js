@@ -23,7 +23,6 @@ const useStyles = makeStyles(() => ({
   root: {
     backgroundColor: "#F8F9F9",
     borderTop: "6px solid #ff7961",
-    borderBottom: "6px solid #ff7961",
   },
 }));
 
