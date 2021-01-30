@@ -9,7 +9,7 @@ const useFetch = (url) => {
     setTimeout(() => {
       fetch(url)
         .then((res) => {
-          console.log(res.ok);
+          // console.log(res.ok);
           if (!res.ok) {
             // Error coming back from server
             throw Error("Could not fetch the data for that resource");
@@ -27,7 +27,7 @@ const useFetch = (url) => {
           setIsLoading(false);
           setError(err.message);
         });
-    }, 1000);
+    }, 500);
   }, [url]);
 
   return { data, isLoading, error };

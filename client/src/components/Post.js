@@ -12,7 +12,7 @@ import {
 } from "@material-ui/core";
 
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import MessageOutlinedIcon from "@material-ui/icons/MessageOutlined";
+// import MessageOutlinedIcon from "@material-ui/icons/MessageOutlined";
 import DeleteOutlinedIcon from "@material-ui/icons/DeleteOutlined";
 
 const useStyles = makeStyles({
@@ -47,7 +47,7 @@ function Post({ items, visibleItems, handleDelete }) {
           <div className={classes.posts}>
             <Card>
               <Link
-                to={`/posts/${item.id}`}
+                to={`/item/${item.id}`}
                 style={{ color: "inherit", textDecoration: "none" }}
               >
                 <CardActionArea>

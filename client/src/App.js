@@ -13,7 +13,7 @@ import MyOrders from "./components/pages/MyOrders";
 import Settings from "./components/pages/Settings";
 import Notifications from "./components/pages/Notifications";
 import Favourites from "./components/pages/Favourites";
-import DetailedPost from "./components/pages/DetailedPost";
+import DetailedItem from "./components/pages/DetailedItem";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -46,7 +46,7 @@ function App() {
           <Route path="/notifications" component={Notifications} />
           <Route path="/favourites" component={Favourites} />
           <Route path="/post" component={Post} />
-          <Route path="/posts/:id" component={DetailedPost} />
+          <Route path="/item/:id" component={DetailedItem} />
         </Switch>
         <Footer />
       </div>
