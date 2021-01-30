@@ -13,7 +13,7 @@ import {
 
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 // import MessageOutlinedIcon from "@material-ui/icons/MessageOutlined";
-import DeleteOutlinedIcon from "@material-ui/icons/DeleteOutlined";
+// import DeleteOutlinedIcon from "@material-ui/icons/DeleteOutlined";
 
 const useStyles = makeStyles({
   root: {
@@ -69,12 +69,12 @@ function Post({ items, visibleItems, handleDelete }) {
                 <IconButton aria-label="add to favorites">
                   <FavoriteBorderIcon />
                 </IconButton>
-                <IconButton
+                {/* <IconButton
                   aria-label="leave a message"
                   onClick={() => handleDelete(item.id)}
                 >
                   <DeleteOutlinedIcon />
-                </IconButton>
+                </IconButton> */}
               </div>
             </Card>
           </div>
