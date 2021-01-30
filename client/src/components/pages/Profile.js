@@ -20,7 +20,9 @@ const useStyles = makeStyles(() => ({
     paddingBottom: 100,
   },
   card: {
-    width: 450,
+    width: 300,
+    height: 450,
+    padding: 20,
   },
   cardcontainer: {
     display: "flex",
@@ -29,8 +31,8 @@ const useStyles = makeStyles(() => ({
 
   media: {
     margin: "0 auto 0",
-    width: "70%",
-    height: 200,
+    width: "100%",
+    height: 300,
   },
   avatar: {
     backgroundColor: "#ff7961",
