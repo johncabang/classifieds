@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Home from "./components/pages/Home";
+// import Home from "./components/pages/Home";
+import Posts from "./components/Posts";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Register from "./components/pages/Register";
 import AdminSignin from "./components/pages/AdminSignin";
 import Signin from "./components/pages/Signin";
 import Post from "./components/pages/PostAd";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Profile from "./components/pages/Profile";
 import MyAds from "./components/pages/MyAds";
 import MyOrders from "./components/pages/MyOrders";
@@ -34,7 +35,7 @@ function App() {
       <div className={classes.root}>
         <Navbar />
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact component={Posts} />
           <Route path="/register" component={Register} />
           <Route path="/adminsignin" component={AdminSignin} />
           <Route path="/signin" component={Signin} />

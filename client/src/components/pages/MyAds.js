@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
@@ -25,8 +27,8 @@ const useStyles = makeStyles(() => ({
   },
   card: {
     display: "flex",
-    width: 700,
-    height: 150,
+    width: 800,
+    height: 100,
   },
   details: {
     display: "flex",
@@ -62,14 +64,19 @@ function MyAds() {
                 title="iPhone 11 Pro"
               />
               <div className={classes.details}>
-                <CardContent className={classes.content}>
-                  <Typography component="h5" variant="h5">
-                    iPhone 11 Pro
-                  </Typography>
-                  <Typography variant="subtitle1" color="textSecondary">
-                    $750
-                  </Typography>
-                </CardContent>
+                <Link
+                  to={`/`}
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  <CardContent className={classes.content}>
+                    <Typography component="h5" variant="h5">
+                      iPhone 11 Pro
+                    </Typography>
+                    <Typography variant="subtitle1" color="textSecondary">
+                      $750
+                    </Typography>
+                  </CardContent>
+                </Link>
                 <div className={classes.icons}>
                   <IconButton aria-label="edit">
                     <EditIcon />

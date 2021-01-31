@@ -38,7 +38,7 @@ const useStyles = makeStyles(() => ({
     padding: 14,
   },
 }));
-function DetailedPost() {
+function DetailedItem() {
   const classes = useStyles();
 
   const { id } = useParams();
@@ -117,4 +117,4 @@ function DetailedPost() {
   );
 }
 
-export default DetailedPost;
+export default DetailedItem;

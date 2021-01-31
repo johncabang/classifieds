@@ -1,39 +1,6 @@
-// import React from "react";
-// import { makeStyles } from "@material-ui/core/styles";
-// import { Grid, Typography } from "@material-ui/core/";
-
-// const useStyles = makeStyles(() => ({
-//   root: {
-//     // minHeight: "80vh",
-//     // alignItems: "center",
-//     // display: "flex",
-//     // justifyContent: "center",
-//   },
-// }));
-
-// function Favourites() {
-//   const classes = useStyles();
-
-//   return (
-//     <Grid
-//       container
-//       className={classes.root}
-//       direction="column"
-//       alignItems="center"
-//       justify="center"
-//       style={{ minHeight: "80vh" }}
-//       spacing={0}
-//     >
-//       <Grid item xs={12}>
-//         <Typography variant="h5">Favourites!</Typography>
-//       </Grid>
-//     </Grid>
-//   );
-// }
-
-// export default Favourites;
-
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
@@ -60,7 +27,8 @@ const useStyles = makeStyles(() => ({
   card: {
     display: "flex",
     justifyContent: "center",
-    width: 700,
+    width: 800,
+    height: 100,
   },
   details: {
     display: "flex",
@@ -96,25 +64,30 @@ function Favourites() {
                 title="iPhone 11 Pro"
               />
               <div className={classes.details}>
-                <CardContent className={classes.content}>
-                  <Typography component="h5" variant="h5">
-                    iPhone 11 Pro
-                  </Typography>
-                  <Typography variant="body1" color="textPrimary">
-                    $750
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary">
+                <Link
+                  to={`/`}
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  <CardContent className={classes.content}>
+                    <Typography component="h5" variant="h5">
+                      iPhone 11 Pro
+                    </Typography>
+                    <Typography variant="subtitle1" color="textSecondary">
+                      $750
+                    </Typography>
+                    {/* <Typography variant="body2" color="textSecondary">
                     The iPhone 11 Pro and iPhone 11 Pro Max are smartphones
                     designed, developed and marketed by Apple Inc. They are the
                     13th-generation flagship iPhones, succeeding the iPhone XS
                     and iPhone XS Max, respectively. Apple CEO Tim Cook unveiled
                     the devices alongside a lower-end model, the iPhone 11, on
                     September 10, 2019, at the Steve Jobs Theater at Apple Park.
-                  </Typography>
-                </CardContent>
+                  </Typography> */}
+                  </CardContent>
+                </Link>
                 <div className={classes.icons}>
                   <IconButton
-                    aria-label="leave a message"
+                    aria-label="delete"
                     // onClick={() => handleDelete(item.id)}
                   >
                     <DeleteOutlinedIcon />

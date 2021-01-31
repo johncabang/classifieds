@@ -6,6 +6,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import YouTubeIcon from "@material-ui/icons/YouTube";
+import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -38,10 +39,34 @@ function Footer() {
     <div className={classes.root}>
       <Grid container>
         <Grid item xs={12} className={classes.icons}>
-          <FacebookIcon />
-          <InstagramIcon />
-          <TwitterIcon />
-          <YouTubeIcon />
+          <IconButton
+            aria-label="Facebook.com"
+            color="inherit"
+            onClick={() => window.open("https://www.facebook.com")}
+          >
+            <FacebookIcon />
+          </IconButton>
+          <IconButton
+            aria-label="Instagram.com"
+            color="inherit"
+            onClick={() => window.open("https://www.instagram.com")}
+          >
+            <InstagramIcon />
+          </IconButton>
+          <IconButton
+            aria-label="Twitter.com"
+            color="inherit"
+            onClick={() => window.open("https://www.twitter.com")}
+          >
+            <TwitterIcon />
+          </IconButton>
+          <IconButton
+            aria-label="YouTube.com"
+            color="inherit"
+            onClick={() => window.open("https://www.youtube.com")}
+          >
+            <YouTubeIcon />
+          </IconButton>
         </Grid>
         <Grid item xs={12} className={classes.copyright}>
           <CopyrightIcon />
