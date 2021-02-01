@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Home from "./components/pages/Home";
 import Register from "./components/pages/Register";
@@ -30,26 +30,24 @@ function App() {
   const classes = useStyles();
 
   return (
-    <Router>
-      <div className={classes.root}>
-        <Navbar />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/register" component={Register} />
-          <Route path="/adminsignin" component={AdminSignin} />
-          <Route path="/signin" component={Signin} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/myads" component={MyAds} />
-          <Route path="/myorders" component={MyOrders} />
-          <Route path="/settings" component={Settings} />
-          <Route path="/notifications" component={Notifications} />
-          <Route path="/favourites" component={Favourites} />
-          <Route path="/post" component={Post} />
-          <Route path="/item/:id" component={DetailedItem} />
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
+    <div className={classes.root}>
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/register" component={Register} />
+        <Route path="/adminsignin" component={AdminSignin} />
+        <Route path="/signin" component={Signin} />
+        <Route path="/profile" component={Profile} />
+        <Route path="/myads" component={MyAds} />
+        <Route path="/myorders" component={MyOrders} />
+        <Route path="/settings" component={Settings} />
+        <Route path="/notifications" component={Notifications} />
+        <Route path="/favourites" component={Favourites} />
+        <Route path="/post" component={Post} />
+        <Route path="/item/:id" component={DetailedItem} />
+      </Switch>
+      <Footer />
+    </div>
   );
 }
 

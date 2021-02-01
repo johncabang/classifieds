@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Button, Typography } from "@material-ui/core";
 
@@ -69,6 +71,7 @@ function Navbar(props) {
     history.push(pageURL);
     setAnchorEl(null);
   };
+  // console.log("useHistory From Navbar.js - ", history);
 
   const menuItems = [
     {
@@ -77,19 +80,27 @@ function Navbar(props) {
     },
     {
       menuTitle: "Login",
-      pageURL: "/login",
+      pageURL: "/signin",
+    },
+    {
+      menuTitle: "Profile",
+      pageURL: "/profile",
+    },
+    {
+      menuTitle: "My Ads",
+      pageURL: "/myads",
+    },
+    {
+      menuTitle: "Settings",
+      pageURL: "/settings",
     },
     {
       menuTitle: "Favourites",
       pageURL: "/favourites",
     },
     {
-      menuTitle: "Notifications",
-      pageURL: "/notifications",
-    },
-    {
-      menuTitle: "Profile",
-      pageURL: "/profile",
+      menuTitle: "Logout",
+      pageURL: "/",
     },
   ];
 
@@ -110,6 +121,21 @@ function Navbar(props) {
                 </Typography>
               </Link>
               <div className={classes.menuButton}>
+                <IconButton
+                  component={Link}
+                  to="/notifications"
+                  type="submit"
+                  aria-label="show 7 new notifications"
+                  aria-controls="notification-menu"
+                  aria-haspopup="true"
+                  style={{ paddingRight: 30 }}
+                  // onClick={handleClick}
+                >
+                  <Badge badgeContent={7} color="secondary">
+                    <NotificationsNoneOutlinedIcon />
+                  </Badge>
+                </IconButton>
+
                 <IconButton
                   edge="start"
                   color="inherit"
@@ -133,10 +159,13 @@ function Navbar(props) {
                   open={open}
                   onClose={() => setAnchorEl(null)}
                 >
-                  {menuItems.map((menuItem) => {
+                  {menuItems.map((menuItem, index) => {
                     const { menuTitle, pageURL } = menuItem;
                     return (
-                      <MenuItem onClick={() => handleMenuClick(pageURL)}>
+                      <MenuItem
+                        key={index}
+                        onClick={() => handleMenuClick(pageURL)}
+                      >
                         {menuTitle}
                       </MenuItem>
                     );
@@ -217,4 +246,4 @@ function Navbar(props) {
   );
 }
 
-export default Navbar;
+export default withRouter(Navbar);

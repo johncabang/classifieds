@@ -79,6 +79,70 @@
       "description": "The Casio AE1200 has a purely digital dial whose presentation is via a liquid crystal display (LCD). ... This overlay divides the face into the primary display, a world map with time zone, an alarm indicator and finally a digital version of an analogue watch face.",
       "price": "$20",
       "featured": false
+    },
+    {
+      "id": 11,
+      "img": "https://images.pexels.com/photos/2661929/pexels-photo-2661929.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "title": "iMac",
+      "description": "iMac is a family of all-in-one Macintosh desktop computers designed and built by Apple Inc. ... It also includes a dual microphone setup and includes solid-state drive (SSD) or hard disk storage, or an Apple Fusion Drive, a hybrid of solid-state and hard disk drives.",
+      "price": "$1420",
+      "featured": false
+    },
+    {
+      "id": 12,
+      "img": "https://images.pexels.com/photos/698853/pexels-photo-698853.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "title": "Yamaha FJR1300",
+      "description": "The FJR1300 was introduced to Europe in 2001, before arriving in North America in 2002, with the 2003 model year designation, and offered in a non-ABS version only. The 2003 model garnered several awards in the Sport Touring category from various magazines.",
+      "price": "$3100",
+      "featured": false
+    },
+    {
+      "id": 13,
+      "img": "https://images.pexels.com/photos/2082092/pexels-photo-2082092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "title": "Modern Side Table",
+      "description": "Beautiful white side table inspired by Danish traditional mid-century masterpieces. The delicately sculpted frame falls 45 degrees into the drawers creating a beautiful casing and intricate depth. Neatly tapered solid wood legs complete the look with handsome brushed copper detail. The perfect complement to the Asher bed frame, and completes the classic mid-century modern dream.",
+      "price": "$600",
+      "featured": false
+    },
+    {
+      "id": 14,
+      "img": "https://images.pexels.com/photos/2546923/pexels-photo-2546923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "title": "Ray Ban Clubround",
+      "description": "The newest Ray-Ban legend was inspired by the authentic style of modern intellectuals and bohemian creatives : introducing the Clubround. As unmistakable as it is unique, the Clubround is the combination of two of the year’s most successful trends, the Clubmaster and Round styles. Yet this authentic design with unique new colors and lenses is about to become an icon in its own right.",
+      "price": "$212",
+      "featured": false
+    },
+    {
+      "id": 15,
+      "img": "https://images.pexels.com/photos/163007/phone-old-year-built-1955-bakelite-163007.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "title": "Rotary Phone",
+      "description": "A rotary dial is a component of a telephone or a telephone switchboard that implements a signaling technology in telecommunications known as pulse dialing. It is used when initiating a telephone call to transmit the destination telephone number to a telephone exchange.",
+      "price": "$450",
+      "featured": false
+    },
+    {
+      "id": 16,
+      "img": "https://images.pexels.com/photos/4835419/pexels-photo-4835419.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "title": "Game Over Neon Sign",
+      "description": "In the signage industry, neon signs are electric signs lighted by long luminous gas-discharge tubes that contain rarefied neon or other gases. ... While they are used worldwide, neon signs were popular in the United States from about the 1920s to 1960s.",
+      "price": "$95",
+      "featured": false
+    },
+    {
+      "id": 17,
+      "img": "https://images.pexels.com/photos/5721869/pexels-photo-5721869.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "title": "GoldStar Tube TV",
+      "description": "The Tube, slang for television, from the term cathode ray tube. The Tube (2003 TV series), an ITV/Sky programme featuring the work of staff on the London Underground. The Tube (2012 TV series), a BBC documentary about those who work and travel on the London Underground.",
+      "price": "$5",
+      "featured": false
+    },
+    {
+      "id": 18,
+      "img": "https://images.pexels.com/photos/4715446/pexels-photo-4715446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "title": "Globe",
+      "description": "A globe is a spherical model of Earth, of some other celestial body, or of the celestial sphere. Globes serve purposes similar to some maps, but unlike maps, do not distort the surface that they portray except to scale it down. ... The word globe comes from the Latin word globus, meaning sphere.",
+      "price": "$45",
+      "featured": false
     }
   ]
 }

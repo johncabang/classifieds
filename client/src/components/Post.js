@@ -27,7 +27,7 @@ const useStyles = makeStyles({
   },
 
   media: {
-    height: 120,
+    height: 100,
   },
   cardfooter: {
     display: "flex",
@@ -35,6 +35,7 @@ const useStyles = makeStyles({
     justifyContent: "space-between",
     alignSelf: "flex-end",
     padding: 20,
+    paddingTop: 0,
     bottom: 0,
   },
 });
