@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function Searchbar() {
+function Searchbar(props) {
   const classes = useStyles();
 
   return (
@@ -22,6 +22,7 @@ function Searchbar() {
           variant="outlined"
           size="small"
           style={{ width: "100%" }}
+          onChange={(e) => console.log(e.target.value)}
           InputProps={{
             startAdornment: (
               <InputAdornment>

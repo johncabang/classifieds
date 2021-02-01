@@ -22,11 +22,12 @@ const useStyles = makeStyles({
   },
   posts: {
     marginTop: 40,
-    maxWidth: 220,
+    maxWidth: 170,
     padding: 10,
   },
+
   media: {
-    height: 200,
+    height: 120,
   },
   cardfooter: {
     display: "flex",
@@ -34,6 +35,7 @@ const useStyles = makeStyles({
     justifyContent: "space-between",
     alignSelf: "flex-end",
     padding: 20,
+    bottom: 0,
   },
 });
 
@@ -46,24 +48,25 @@ function Post({ items, visibleItems, handleDelete }) {
         <div key={item.id}>
           <div className={classes.posts}>
             <Card>
-              <Link
-                to={`/item/${item.id}`}
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                <CardActionArea>
+              <CardActionArea>
+                <Link
+                  to={`/item/${item.id}`}
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
                   <CardMedia
                     className={classes.media}
                     component="img"
                     image={item.img}
                     title={item.title}
                   />
+
                   <CardContent>
-                    <Typography gutterBottom variant="body1" component="p">
+                    <Typography gutterBottom variant="caption" component="p">
                       {item.title}
                     </Typography>
                   </CardContent>
-                </CardActionArea>
-              </Link>
+                </Link>
+              </CardActionArea>
               <div className={classes.cardfooter}>
                 {item.price}
                 <IconButton aria-label="add to favorites">
