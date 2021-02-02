@@ -39,11 +39,13 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function Profile() {
+function Profile({ user }) {
   const classes = useStyles();
 
   return (
     <>
+      {console.log("From Profile.js - ", user.email)}
+
       <Grid container className={classes.root} spacing={0}>
         <Grid item xs={12}>
           <div className={classes.cardcontainer}>
@@ -51,7 +53,7 @@ function Profile() {
               <CardHeader
                 avatar={
                   <Avatar aria-label="recipe" className={classes.avatar}>
-                    J
+                    {user.email.charAt(0)}
                   </Avatar>
                 }
                 action={
@@ -59,7 +61,7 @@ function Profile() {
                     <EditIcon />
                   </IconButton>
                 }
-                title="John C."
+                title={user.email}
               />
               <div className={classes.image}>
                 <CardMedia

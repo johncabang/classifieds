@@ -1,10 +1,21 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { Menu, MenuItem, IconButton } from "@material-ui/core/";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import { Avatar, Menu, MenuItem, Button } from "@material-ui/core/";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { makeStyles } from "@material-ui/core/styles";
 
-function ProfileMenu({ handleLogout }) {
+const useStyles = makeStyles(() => ({
+  avatar: {
+    backgroundColor: "#ff7961",
+    height: 30,
+    width: 30,
+  },
+}));
+
+function ProfileMenu({ handleLogout, user }) {
+  const classes = useStyles();
+
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -17,14 +28,14 @@ function ProfileMenu({ handleLogout }) {
 
   return (
     <div>
-      <IconButton
-        aria-label="add to favorites"
-        aria-controls="profile-menu"
-        aria-haspopup="true"
-        onClick={handleClick}
-      >
-        <AccountCircleIcon />
-      </IconButton>
+      <Button onClick={handleClick} style={{ backgroundColor: "transparent" }}>
+        <Avatar className={classes.avatar} aria-label="avatar">
+          {user.email.charAt(0)}
+        </Avatar>
+        <span>
+          <ExpandMoreIcon />
+        </span>
+      </Button>
       <Menu
         id="profile-menu"
         anchorEl={anchorEl}

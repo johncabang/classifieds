@@ -1,16 +1,7 @@
 import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  Button,
-  // Checkbox,
-  // FormControlLabel,
-  Grid,
-  // Link,
-  Paper,
-  TextField,
-  Typography,
-} from "@material-ui/core/";
+import { Button, Grid, Paper, TextField, Typography } from "@material-ui/core/";
 
 import Hero from "../Hero";
 
@@ -65,7 +56,6 @@ function Signin(props) {
     setHasAccount,
     emailError,
     passwordError,
-    user,
   } = props;
 
   const classes = useStyles();
@@ -77,11 +67,11 @@ function Signin(props) {
         <Paper className={classes.paper}>
           {hasAccount ? (
             <Typography component="h1" variant="h5">
-              Sign In
+              Sign in
             </Typography>
           ) : (
             <Typography component="h1" variant="h5">
-              Register
+              Create your account
             </Typography>
           )}
 
@@ -92,7 +82,7 @@ function Signin(props) {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Email"
               name="email"
               autoComplete="email"
               InputLabelProps={{
@@ -111,7 +101,9 @@ function Signin(props) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <Typography variant="h6">{emailError}</Typography>
+            <Typography variant="body2" color="secondary">
+              {emailError}
+            </Typography>
             <TextField
               variant="outlined"
               margin="normal"
@@ -138,7 +130,9 @@ function Signin(props) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Typography variant="h6">{passwordError}</Typography>
+            <Typography variant="body2" color="secondary">
+              {passwordError}
+            </Typography>
             {/* <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
@@ -153,7 +147,7 @@ function Signin(props) {
                     className={classes.submit}
                     onClick={handleLogin}
                   >
-                    Sign In
+                    Sign in
                   </Button>
 
                   <Grid container justify="flex-end">
@@ -166,7 +160,7 @@ function Signin(props) {
                           style={{ cursor: "pointer" }}
                           onClick={() => setHasAccount(!hasAccount)}
                         >
-                          Register
+                          Create account
                         </span>
                       </Typography>
                       {/* </Link> */}
@@ -182,13 +176,13 @@ function Signin(props) {
                     className={classes.submit}
                     onClick={handleSignup}
                   >
-                    Register
+                    Create Account
                   </Button>
 
                   <Grid container justify="flex-end">
                     <Grid item>
                       <Typography variant="body1">
-                        Have an account?{" "}
+                        Already have an account?{" "}
                         <span
                           style={{ cursor: "pointer" }}
                           onClick={() => setHasAccount(!hasAccount)}
@@ -201,7 +195,6 @@ function Signin(props) {
                 </>
               )}
             </>
-            {console.log("From NavBar.js - ", user)}
           </div>
         </Paper>
       </div>

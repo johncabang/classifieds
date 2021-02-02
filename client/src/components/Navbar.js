@@ -3,30 +3,30 @@ import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import { Button, Typography } from "@material-ui/core";
+import {
+  AppBar,
+  Badge,
+  Button,
+  IconButton,
+  Menu,
+  MenuItem,
+  Toolbar,
+  Typography,
+  useMediaQuery,
+} from "@material-ui/core";
 
 import ProfileMenu from "./ProfileMenu";
 // import Searchbar from "./Searchbar";
-import SigninMenu from "./SigninMenu";
-import IconButton from "@material-ui/core/IconButton";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import MenuItem from "@material-ui/core/MenuItem";
+// import SigninMenu from "./SigninMenu";
 
-import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-
-import Badge from "@material-ui/core/Badge";
 import NotificationsNoneOutlinedIcon from "@material-ui/icons/NotificationsNoneOutlined";
-
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingLeft: "15%",
     paddingRight: "15%",
-    height: 80,
     backgroundColor: "white",
   },
   nav: {
@@ -42,12 +42,10 @@ const useStyles = makeStyles((theme) => ({
   },
   links: {
     display: "flex",
-    justifyContent: "space-around",
     listStyle: "none",
     alignItems: "center",
     whiteSpace: "nowrap",
   },
-
   title: {
     [theme.breakpoints.down("sm")]: {
       flexGrow: 1,
@@ -127,7 +125,7 @@ function Navbar(props) {
                   aria-label="show 7 new notifications"
                   aria-controls="notification-menu"
                   aria-haspopup="true"
-                  style={{ paddingRight: 30 }}
+                  // style={{ paddingRight: 30 }}
                   // onClick={handleClick}
                 >
                   <Badge badgeContent={7} color="secondary">
@@ -186,8 +184,6 @@ function Navbar(props) {
 
               {/* <Searchbar handleChange={(e) => console.log(e.target.value)} /> */}
 
-              {console.log("From NavBar.js - ", user)}
-
               {user ? (
                 <ul className={classes.links}>
                   <li>
@@ -211,7 +207,7 @@ function Navbar(props) {
                     </IconButton>
                   </li>
                   <li>
-                    <ProfileMenu handleLogout={handleLogout} />
+                    <ProfileMenu user={user} handleLogout={handleLogout} />
                   </li>
                   <li>
                     <Button
@@ -230,18 +226,15 @@ function Navbar(props) {
                 </ul>
               ) : (
                 <ul className={classes.links}>
-                  {/* <li>
+                  <li>
                     <Button
                       component={Link}
-                      to="/register"
+                      to="/signin"
                       type="submit"
                       style={{ textTransform: "none" }}
                     >
-                      Register
+                      Sign In
                     </Button>
-                  </li> */}
-                  <li>
-                    <SigninMenu />
                   </li>
                 </ul>
               )}

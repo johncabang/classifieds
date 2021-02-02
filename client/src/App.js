@@ -136,7 +136,9 @@ function App() {
             passwordError={passwordError}
           />
         </Route>
-        <Route path="/profile" component={Profile} />
+        <Route path="/profile">
+          <Profile user={user} email={email} />
+        </Route>
         <Route path="/myads" component={MyAds} />
         <Route path="/myorders" component={MyOrders} />
         <Route path="/settings" component={Settings} />
