@@ -57,8 +57,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Navbar(props) {
   const classes = useStyles();
-
-  const { history } = props;
+  const { history, user, handleLogout } = props;
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const theme = useTheme();
@@ -186,58 +185,66 @@ function Navbar(props) {
               </Link>
 
               {/* <Searchbar handleChange={(e) => console.log(e.target.value)} /> */}
-              <ul className={classes.links}>
-                <li>
-                  <Button
-                    component={Link}
-                    to="/register"
-                    type="submit"
-                    style={{ textTransform: "none" }}
-                  >
-                    Register
-                  </Button>
-                </li>
-                <li>
-                  <SigninMenu />
-                </li>
-                <li>
-                  <IconButton component={Link} to="/favourites" type="submit">
-                    <FavoriteBorderIcon />
-                  </IconButton>
-                </li>
-                <li>
-                  <IconButton
-                    component={Link}
-                    to="/notifications"
-                    type="submit"
-                    aria-label="show 7 new notifications"
-                    aria-controls="notification-menu"
-                    aria-haspopup="true"
-                    // onClick={handleClick}
-                  >
-                    <Badge badgeContent={7} color="secondary">
-                      <NotificationsNoneOutlinedIcon />
-                    </Badge>
-                  </IconButton>
-                </li>
-                <li>
-                  <ProfileMenu />
-                </li>
-                <li>
-                  <Button
-                    component={Link}
-                    to="/post"
-                    type="submit"
-                    style={{
-                      textTransform: "none",
-                      backgroundColor: "#ff7961",
-                      color: "#fff",
-                    }}
-                  >
-                    Post AD
-                  </Button>
-                </li>
-              </ul>
+
+              {console.log("From NavBar.js - ", user)}
+
+              {user ? (
+                <ul className={classes.links}>
+                  <li>
+                    <IconButton component={Link} to="/favourites" type="submit">
+                      <FavoriteBorderIcon />
+                    </IconButton>
+                  </li>
+                  <li>
+                    <IconButton
+                      component={Link}
+                      to="/notifications"
+                      type="submit"
+                      aria-label="show 7 new notifications"
+                      aria-controls="notification-menu"
+                      aria-haspopup="true"
+                      // onClick={handleClick}
+                    >
+                      <Badge badgeContent={7} color="secondary">
+                        <NotificationsNoneOutlinedIcon />
+                      </Badge>
+                    </IconButton>
+                  </li>
+                  <li>
+                    <ProfileMenu handleLogout={handleLogout} />
+                  </li>
+                  <li>
+                    <Button
+                      component={Link}
+                      to="/post"
+                      type="submit"
+                      style={{
+                        textTransform: "none",
+                        backgroundColor: "#ff7961",
+                        color: "#fff",
+                      }}
+                    >
+                      Post AD
+                    </Button>
+                  </li>
+                </ul>
+              ) : (
+                <ul className={classes.links}>
+                  {/* <li>
+                    <Button
+                      component={Link}
+                      to="/register"
+                      type="submit"
+                      style={{ textTransform: "none" }}
+                    >
+                      Register
+                    </Button>
+                  </li> */}
+                  <li>
+                    <SigninMenu />
+                  </li>
+                </ul>
+              )}
             </div>
           )}
         </Toolbar>

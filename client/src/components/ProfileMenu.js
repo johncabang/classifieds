@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Menu, MenuItem, IconButton } from "@material-ui/core/";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
-function ProfileMenu() {
+function ProfileMenu({ handleLogout }) {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -44,7 +44,7 @@ function ProfileMenu() {
         <MenuItem component={Link} to="/settings" onClick={handleClose}>
           Account Settings
         </MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={handleLogout}>Logout</MenuItem>
       </Menu>
     </div>
   );

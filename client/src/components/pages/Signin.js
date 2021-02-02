@@ -3,10 +3,10 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Button,
-  Checkbox,
-  FormControlLabel,
+  // Checkbox,
+  // FormControlLabel,
   Grid,
-  Link,
+  // Link,
   Paper,
   TextField,
   Typography,
@@ -53,7 +53,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Signin() {
+function Signin(props) {
+  const {
+    email,
+    setEmail,
+    password,
+    setPassword,
+    handleLogin,
+    handleSignup,
+    hasAccount,
+    setHasAccount,
+    emailError,
+    passwordError,
+    user,
+  } = props;
+
   const classes = useStyles();
 
   return (
@@ -61,10 +75,17 @@ function Signin() {
       <Hero />
       <div className={classes.root}>
         <Paper className={classes.paper}>
-          <Typography component="h1" variant="h5">
-            Sign In
-          </Typography>
-          <form className={classes.form} noValidate>
+          {hasAccount ? (
+            <Typography component="h1" variant="h5">
+              Sign In
+            </Typography>
+          ) : (
+            <Typography component="h1" variant="h5">
+              Register
+            </Typography>
+          )}
+
+          <div className={classes.form}>
             <TextField
               variant="outlined"
               margin="normal"
@@ -87,7 +108,10 @@ function Signin() {
                   notchedOutline: classes.notchedOutline,
                 },
               }}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
+            <Typography variant="h6">{emailError}</Typography>
             <TextField
               variant="outlined"
               margin="normal"
@@ -111,32 +135,74 @@ function Signin() {
                   notchedOutline: classes.notchedOutline,
                 },
               }}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
-            <FormControlLabel
+            <Typography variant="h6">{passwordError}</Typography>
+            {/* <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              className={classes.submit}
-            >
-              Sign in
-            </Button>
-            <Grid container justify="flex-end">
-              {/* <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid> */}
-              <Grid item>
-                <Link href="register" variant="body2">
-                  {"Don't have an account? Register"}
-                </Link>
-              </Grid>
-            </Grid>
-          </form>
+            /> */}
+            <>
+              {hasAccount ? (
+                <>
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    className={classes.submit}
+                    onClick={handleLogin}
+                  >
+                    Sign In
+                  </Button>
+
+                  <Grid container justify="flex-end">
+                    <Grid item>
+                      {/* <Link href="register" variant="body2"> */}
+
+                      <Typography variant="body1">
+                        Don't have an account?{" "}
+                        <span
+                          style={{ cursor: "pointer" }}
+                          onClick={() => setHasAccount(!hasAccount)}
+                        >
+                          Register
+                        </span>
+                      </Typography>
+                      {/* </Link> */}
+                    </Grid>
+                  </Grid>
+                </>
+              ) : (
+                <>
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    className={classes.submit}
+                    onClick={handleSignup}
+                  >
+                    Register
+                  </Button>
+
+                  <Grid container justify="flex-end">
+                    <Grid item>
+                      <Typography variant="body1">
+                        Have an account?{" "}
+                        <span
+                          style={{ cursor: "pointer" }}
+                          onClick={() => setHasAccount(!hasAccount)}
+                        >
+                          Sign in
+                        </span>
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </>
+              )}
+            </>
+            {console.log("From NavBar.js - ", user)}
+          </div>
         </Paper>
       </div>
     </>
