@@ -54,20 +54,22 @@ function App() {
     event.preventDefault();
 
     clearErrors();
-    fire.auth().signInWithEmailAndPassword(email, password);
-    history.push("/").catch((err) => {
-      // eslint-disable-next-line
-      switch (err.code) {
-        case "auth/invalid-email":
-        case "auth/user-disabled":
-        case "auth/user-not-found":
-          setEmailError(err.message);
-          break;
-        case "auth/wrong-password":
-          setPasswordError(err.message);
-          break;
-      }
-    });
+    fire
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .catch((err) => {
+        // eslint-disable-next-line
+        switch (err.code) {
+          case "auth/invalid-email":
+          case "auth/user-disabled":
+          case "auth/user-not-found":
+            setEmailError(err.message);
+            break;
+          case "auth/wrong-password":
+            setPasswordError(err.message);
+            break;
+        }
+      });
     history.push("/");
   };
 
@@ -75,19 +77,22 @@ function App() {
     event.preventDefault();
 
     clearErrors();
-    fire.auth().createUserWithEmailAndPassword(email, password);
-    history.push("/").catch((err) => {
-      // eslint-disable-next-line
-      switch (err.code) {
-        case "auth/email-already-in-use":
-        case "auth/invalid-email":
-          setEmailError(err.message);
-          break;
-        case "auth/weak-password":
-          setPasswordError(err.message);
-          break;
-      }
-    });
+    fire
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .catch((err) => {
+        // eslint-disable-next-line
+        switch (err.code) {
+          case "auth/email-already-in-use":
+          case "auth/invalid-email":
+            setEmailError(err.message);
+            break;
+          case "auth/weak-password":
+            setPasswordError(err.message);
+            break;
+        }
+      });
+    history.push("/");
   };
 
   const handleLogout = () => {
