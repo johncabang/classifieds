@@ -61,18 +61,18 @@ function Profile({ user }) {
                     <EditIcon />
                   </IconButton>
                 }
-                title={user.email}
+                title="Profile"
               />
               <div className={classes.image}>
                 <CardMedia
                   className={classes.media}
-                  image="https://www.flaticon.com/svg/vstatic/svg/145/145850.svg?token=exp=1611981710~hmac=44b477b796dc3a443847a6cdff92e94e"
+                  image="https://www.flaticon.com/svg/vstatic/svg/4164/4164740.svg?token=exp=1612315990~hmac=82df01c8505635c2cc15b5fda9e317b6"
                   title="Profile Image"
                 />
               </div>
               <CardContent>
-                <Typography variant="body1" color="textSecondary" component="p">
-                  Profile description.
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Email: {user.email}
                 </Typography>
               </CardContent>
             </Card>

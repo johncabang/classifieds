@@ -57,6 +57,9 @@ function App() {
     fire
       .auth()
       .signInWithEmailAndPassword(email, password)
+      .then((user) => {
+        history.push("/");
+      })
       .catch((err) => {
         // eslint-disable-next-line
         switch (err.code) {
@@ -70,7 +73,6 @@ function App() {
             break;
         }
       });
-    history.push("/");
   };
 
   const handleSignup = (event) => {
@@ -80,6 +82,9 @@ function App() {
     fire
       .auth()
       .createUserWithEmailAndPassword(email, password)
+      .then((user) => {
+        history.push("/");
+      })
       .catch((err) => {
         // eslint-disable-next-line
         switch (err.code) {
@@ -92,7 +97,6 @@ function App() {
             break;
         }
       });
-    history.push("/");
   };
 
   const handleLogout = () => {
