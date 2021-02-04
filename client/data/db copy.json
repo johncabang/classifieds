@@ -144,5 +144,27 @@
       "price": "$45",
       "featured": false
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "John",
+      "img": "https://avataaars.io/?avatarStyle=Transparent&topType=NoHair&accessoriesType=Round&facialHairType=Blank&clotheType=Hoodie&clotheColor=Gray02&eyeType=Dizzy&eyebrowType=RaisedExcited&mouthType=Vomit&skinColor=Brown"
+    },
+    {
+      "id": 2,
+      "name": "Dianne",
+      "img": "https://avataaars.io/?avatarStyle=Transparent&topType=LongHairDreads&accessoriesType=Wayfarers&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=PastelOrange&eyeType=Close&eyebrowType=RaisedExcited&mouthType=ScreamOpen&skinColor=Brown"
+    },
+    {
+      "id": 3,
+      "name": "Dani",
+      "img": "https://avataaars.io/?avatarStyle=Transparent&topType=LongHairMiaWallace&accessoriesType=Round&hairColor=Black&facialHairType=Blank&clotheType=CollarSweater&clotheColor=PastelBlue&eyeType=Happy&eyebrowType=DefaultNatural&mouthType=Twinkle&skinColor=Brown"
+    },
+    {
+      "id": 4,
+      "name": "Stella",
+      "img": "https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBob&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=Overall&clotheColor=Pink&eyeType=Hearts&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Brown"
+    }
   ]
 }

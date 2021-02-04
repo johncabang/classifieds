@@ -249,7 +249,7 @@ function Navbar(props) {
                   <li>
                     <Button
                       component={Link}
-                      to="/post"
+                      to="/CreatePost"
                       type="submit"
                       style={{
                         textTransform: "none",

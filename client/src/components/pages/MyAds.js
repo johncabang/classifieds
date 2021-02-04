@@ -47,6 +47,11 @@ const useStyles = makeStyles(() => ({
     justifyContent: "space-between",
     flexDirection: "column",
   },
+  title: {
+    display: "flex",
+    justifyContent: "center",
+    paddingBottom: 50,
+  },
 }));
 
 function MyAds() {
@@ -56,6 +61,11 @@ function MyAds() {
     <>
       <Grid container spacing={0} className={classes.root}>
         <Grid item xs={12}>
+          <div className={classes.title}>
+            <Typography component="h6" variant="h6">
+              My Ads
+            </Typography>
+          </div>
           <div className={classes.cardcontainer}>
             <Card className={classes.card}>
               <CardMedia
@@ -69,7 +79,7 @@ function MyAds() {
                   style={{ color: "inherit", textDecoration: "none" }}
                 >
                   <CardContent className={classes.content}>
-                    <Typography component="h5" variant="h5">
+                    <Typography component="h7" variant="h7">
                       iPhone 11 Pro
                     </Typography>
                     <Typography variant="subtitle1" color="textSecondary">

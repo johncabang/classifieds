@@ -66,7 +66,7 @@ function Profile({ user }) {
               <div className={classes.image}>
                 <CardMedia
                   className={classes.media}
-                  image="https://www.flaticon.com/svg/vstatic/svg/4164/4164626.svg?token=exp=1612321451~hmac=c4d44932022ca4f6cfc980512369930c"
+                  image="https://avataaars.io/?avatarStyle=Transparent&topType=NoHair&accessoriesType=Round&facialHairType=Blank&clotheType=Hoodie&clotheColor=Gray02&eyeType=Dizzy&eyebrowType=RaisedExcited&mouthType=Vomit&skinColor=Brown"
                   title="Profile Image"
                 />
               </div>

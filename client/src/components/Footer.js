@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     justifyContent: "center",
     gridGap: 50,
-    paddingTop: 10,
+    // paddingTop: 10,
   },
   copyright: {
     display: "flex",
@@ -29,6 +29,7 @@ const useStyles = makeStyles(() => ({
     alignItems: "center",
     gridGap: 10,
     paddingTop: 20,
+    // paddingBottom: 20,
   },
 }));
 

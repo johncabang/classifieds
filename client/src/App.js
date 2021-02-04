@@ -5,7 +5,7 @@ import Home from "./components/pages/Home";
 import Register from "./components/pages/Register";
 import AdminSignin from "./components/pages/AdminSignin";
 import Signin from "./components/pages/Signin";
-import Post from "./components/pages/PostAd";
+import CreatePost from "./components/pages/CreatePost";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Profile from "./components/pages/Profile";
@@ -14,7 +14,7 @@ import MyOrders from "./components/pages/MyOrders";
 import Settings from "./components/pages/Settings";
 import Notifications from "./components/pages/Notifications";
 import Favourites from "./components/pages/Favourites";
-import DetailedItem from "./components/pages/DetailedItem";
+import DetailedPost from "./components/pages/DetailedPost";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -148,8 +148,8 @@ function App() {
         <Route path="/settings" component={Settings} />
         <Route path="/notifications" component={Notifications} />
         <Route path="/favourites" component={Favourites} />
-        <Route path="/post" component={Post} />
-        <Route path="/item/:id" component={DetailedItem} />
+        <Route path="/CreatePost" component={CreatePost} />
+        <Route path="/item/:id" component={DetailedPost} />
       </Switch>
       <Footer />
     </div>
