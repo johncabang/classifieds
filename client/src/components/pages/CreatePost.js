@@ -73,10 +73,10 @@ function Post() {
       <div className={classes.root}>
         <Paper className={classes.paper}>
           <Typography component="h1" variant="h5">
-            Post
+            Post Ad
           </Typography>
           <form className={classes.form} noValidate>
-            <FormControl className={classes.formControl}>
+            {/* <FormControl className={classes.formControl}>
               <InputLabel id="demo-simple-select-label">Category</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
@@ -103,7 +103,7 @@ function Post() {
                 <MenuItem value={130}>Video Games & Consoles</MenuItem>
                 <MenuItem value={140}>Other</MenuItem>
               </Select>
-            </FormControl>
+            </FormControl> */}
 
             <TextField
               variant="outlined"
@@ -138,7 +138,7 @@ function Post() {
               type="description"
               id="description"
               multiline
-              rows={4}
+              rows={5}
               rowsMax={6}
               InputLabelProps={{
                 classes: {

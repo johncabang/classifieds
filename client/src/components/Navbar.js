@@ -118,7 +118,7 @@ function Navbar(props) {
                   className={classes.title}
                   variant="h3"
                   component="h3"
-                  style={{ borderBottom: "5px solid #000" }}
+                  style={{ borderBottom: "5px solid #ff7961" }}
                 >
                   c
                 </Typography>
@@ -213,9 +213,10 @@ function Navbar(props) {
                 <Typography
                   variant="h5"
                   component="h5"
-                  style={{ borderBottom: "3px solid #000" }}
+                  style={{ borderBottom: "3px solid #ff7961" }}
                 >
-                  classifieds
+                  cl<span style={{ color: "#ff7961" }}>a</span>ssifie
+                  <span style={{ color: "#ff7961" }}>ds</span>
                 </Typography>
               </Link>
 

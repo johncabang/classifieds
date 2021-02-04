@@ -11,14 +11,12 @@
 
 ### Screenshots
 
-!["classifieds hero section"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds-web-001b.png?raw=true)
+!["classifieds sign in"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds-web-001c.png?raw=true)
 
-!["classifieds sign in"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds-web-002b.png?raw=true)
+!["classifieds posts"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds-web-002c.png?raw=true)
 
-!["classifieds register"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds-web-003b.png?raw=true)
+!["classifieds detailed post"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds-web-003c.png?raw=true)
 
-!["classifieds post"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds-web-004b.png?raw=true)
+!["classifieds profile"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds-web-004c.png?raw=true)
 
-!["classifieds post"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds-mobile-001b.png?raw=true)
-
-!["classifieds post"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds-mobile-002b.png?raw=true)
+!["classifieds mobile posts"](https://github.com/johncabang/classifieds/blob/master/docs/classifieds-mobile-001c.png?raw=true)
