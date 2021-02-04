@@ -45,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
     listStyle: "none",
     alignItems: "center",
     whiteSpace: "nowrap",
+    justifyContent: "space-between",
   },
   title: {
     [theme.breakpoints.down("sm")]: {
@@ -64,42 +65,47 @@ function Navbar(props) {
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   const handleMenuClick = (pageURL) => {
     history.push(pageURL);
     setAnchorEl(null);
   };
   // console.log("useHistory From Navbar.js - ", history);
 
-  const menuItems = [
-    {
-      menuTitle: "Register",
-      pageURL: "/register",
-    },
-    {
-      menuTitle: "Login",
-      pageURL: "/signin",
-    },
-    {
-      menuTitle: "Profile",
-      pageURL: "/profile",
-    },
-    {
-      menuTitle: "My Ads",
-      pageURL: "/myads",
-    },
-    {
-      menuTitle: "Settings",
-      pageURL: "/settings",
-    },
-    {
-      menuTitle: "Favourites",
-      pageURL: "/favourites",
-    },
-    {
-      menuTitle: "Logout",
-      pageURL: "/",
-    },
-  ];
+  // const menuItems = [
+  //   {
+  //     menuTitle: "Register",
+  //     pageURL: "/register",
+  //   },
+  //   {
+  //     menuTitle: "Login",
+  //     pageURL: "/signin",
+  //   },
+  //   {
+  //     menuTitle: "Profile",
+  //     pageURL: "/profile",
+  //   },
+  //   {
+  //     menuTitle: "My Ads",
+  //     pageURL: "/myads",
+  //   },
+  //   {
+  //     menuTitle: "Settings",
+  //     pageURL: "/settings",
+  //   },
+  //   {
+  //     menuTitle: "Favourites",
+  //     pageURL: "/favourites",
+  //   },
+  //   {
+  //     menuTitle: "Logout",
+  //     pageURL: "/",
+  //   },
+  // ];
 
   return (
     <div className={classes.root}>
@@ -118,20 +124,22 @@ function Navbar(props) {
                 </Typography>
               </Link>
               <div className={classes.menuButton}>
-                <IconButton
-                  component={Link}
-                  to="/notifications"
-                  type="submit"
-                  aria-label="show 7 new notifications"
-                  aria-controls="notification-menu"
-                  aria-haspopup="true"
-                  // style={{ paddingRight: 30 }}
-                  // onClick={handleClick}
-                >
-                  <Badge badgeContent={7} color="secondary">
-                    <NotificationsNoneOutlinedIcon />
-                  </Badge>
-                </IconButton>
+                {user && (
+                  <IconButton
+                    component={Link}
+                    to="/notifications"
+                    type="submit"
+                    aria-label="show 7 new notifications"
+                    aria-controls="notification-menu"
+                    aria-haspopup="true"
+                    // style={{ paddingRight: 30 }}
+                    // onClick={handleClick}
+                  >
+                    <Badge badgeContent={7} color="secondary">
+                      <NotificationsNoneOutlinedIcon />
+                    </Badge>
+                  </IconButton>
+                )}
 
                 <IconButton
                   edge="start"
@@ -156,7 +164,7 @@ function Navbar(props) {
                   open={open}
                   onClose={() => setAnchorEl(null)}
                 >
-                  {menuItems.map((menuItem, index) => {
+                  {/* {menuItems.map((menuItem, index) => {
                     const { menuTitle, pageURL } = menuItem;
                     return (
                       <MenuItem
@@ -166,7 +174,36 @@ function Navbar(props) {
                         {menuTitle}
                       </MenuItem>
                     );
-                  })}
+                  })} */}
+
+                  {user ? (
+                    <div>
+                      <MenuItem onClick={() => handleMenuClick("/profile")}>
+                        Profile
+                      </MenuItem>
+                      <MenuItem onClick={() => handleMenuClick("/myads")}>
+                        My Ads
+                      </MenuItem>
+                      <MenuItem onClick={() => handleMenuClick("/settings")}>
+                        Settings
+                      </MenuItem>
+                      <MenuItem onClick={() => handleMenuClick("/favourites")}>
+                        Favourites
+                      </MenuItem>
+                      <MenuItem
+                        onClick={function () {
+                          handleLogout();
+                          handleClose();
+                        }}
+                      >
+                        Logout
+                      </MenuItem>
+                    </div>
+                  ) : (
+                    <MenuItem onClick={() => handleMenuClick("/signin")}>
+                      Sign in
+                    </MenuItem>
+                  )}
                 </Menu>
               </div>
             </div>
