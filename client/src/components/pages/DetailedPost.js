@@ -31,6 +31,7 @@ const useStyles = makeStyles(() => ({
   },
   media: {
     height: 500,
+    width: 500,
   },
   formcontainer: {
     display: "flex",

@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Button,
-  FormControl,
-  InputLabel,
-  MenuItem,
+  // FormControl,
+  // InputLabel,
+  // MenuItem,
   Paper,
   TextField,
-  Select,
+  // Select,
   Typography,
 } from "@material-ui/core/";
 
@@ -62,11 +63,36 @@ const useStyles = makeStyles((theme) => ({
 
 function Post() {
   const classes = useStyles();
-  const [category, setCategory] = useState("");
+  const history = useHistory();
+  // const [category, setCategory] = useState("");
 
-  const handleChange = (event) => {
-    setCategory(event.target.value);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [price, setPrice] = useState("");
+  const [img, setImg] = useState("");
+  const [isPending, setIsPending] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const item = { title, description, price, img };
+
+    setIsPending(true);
+
+    fetch("http://localhost:8000/items", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(item),
+    }).then(() => {
+      console.log("new item added");
+      history.pushState("/");
+      setIsPending(false);
+    });
   };
+
+  // const handleChange = (event) => {
+  //   setCategory(event.target.value);
+  // };
+
   return (
     <>
       <Hero />
@@ -75,7 +101,7 @@ function Post() {
           <Typography component="h1" variant="h5">
             Post Ad
           </Typography>
-          <form className={classes.form} noValidate>
+          <form className={classes.form} noValidate onSubmit={handleSubmit}>
             {/* <FormControl className={classes.formControl}>
               <InputLabel id="demo-simple-select-label">Category</InputLabel>
               <Select
@@ -126,6 +152,7 @@ function Post() {
                   notchedOutline: classes.notchedOutline,
                 },
               }}
+              onChange={(e) => setTitle(e.target.value)}
             />
 
             <TextField
@@ -153,6 +180,7 @@ function Post() {
                   notchedOutline: classes.notchedOutline,
                 },
               }}
+              onChange={(e) => setDescription(e.target.value)}
             />
 
             <TextField
@@ -177,16 +205,54 @@ function Post() {
                   notchedOutline: classes.notchedOutline,
                 },
               }}
+              onChange={(e) => setPrice(e.target.value)}
             />
 
-            <Button
-              type="submit"
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
               fullWidth
-              variant="contained"
-              className={classes.submit}
-            >
-              Post Your Ad
-            </Button>
+              name="image"
+              label="Image"
+              // type="image"
+              id="image"
+              InputLabelProps={{
+                classes: {
+                  root: classes.cssLabel,
+                  focused: classes.cssFocused,
+                },
+              }}
+              InputProps={{
+                classes: {
+                  root: classes.cssOutlinedInput,
+                  focused: classes.cssFocused,
+                  notchedOutline: classes.notchedOutline,
+                },
+              }}
+              onChange={(e) => setImg(e.target.value)}
+            />
+
+            {!isPending && (
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                className={classes.submit}
+              >
+                Post Your Ad
+              </Button>
+            )}
+            {isPending && (
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                className={classes.submit}
+              >
+                Posting ad...
+              </Button>
+            )}
           </form>
         </Paper>
       </div>
