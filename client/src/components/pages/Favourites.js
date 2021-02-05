@@ -62,9 +62,7 @@ function Favourites() {
       <Grid container spacing={0} className={classes.root}>
         <Grid item xs={12}>
           <div className={classes.title}>
-            <Typography component="h6" variant="h6">
-              Favourites
-            </Typography>
+            <Typography variant="h6">Favourites</Typography>
           </div>
           <div className={classes.cardcontainer}>
             <Card className={classes.card}>
@@ -79,9 +77,7 @@ function Favourites() {
                   style={{ color: "inherit", textDecoration: "none" }}
                 >
                   <CardContent className={classes.content}>
-                    <Typography component="h7" variant="h7">
-                      iPhone 11 Pro
-                    </Typography>
+                    <Typography variant="h6">iPhone 11 Pro</Typography>
                     <Typography variant="subtitle1" color="textSecondary">
                       $750
                     </Typography>
