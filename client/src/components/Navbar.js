@@ -28,6 +28,12 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "15%",
     paddingRight: "15%",
     backgroundColor: "white",
+    borderTop: "6px solid #ff7961",
+    height: 80,
+  },
+  appbar: {
+    width: "100%",
+    zIndex: 100,
   },
   nav: {
     alignItems: "center",
@@ -109,7 +115,12 @@ function Navbar(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="inherit" elevation={0}>
+      <AppBar
+        position="static"
+        color="inherit"
+        elevation={0}
+        className={classes.appbar}
+      >
         <Toolbar style={{ padding: 0 }}>
           {isMobile ? (
             <div className={classes.nav}>

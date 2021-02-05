@@ -21,7 +21,7 @@ function Posts() {
     "http://localhost:8000/items"
   );
   // Visible items set to 5 (default)
-  const [visibleItems, setVisibleItems] = useState(5);
+  const [visibleItems, setVisibleItems] = useState(10);
 
   // Set visible items to current amount + 5
   const handleClick = () => {
@@ -45,11 +45,13 @@ function Posts() {
         </div>
       )}
       {items && (
-        <Post
-          items={items}
-          visibleItems={visibleItems}
-          // handleDelete={handleDelete}
-        />
+        <div className={classes.post}>
+          <Post
+            items={items}
+            visibleItems={visibleItems}
+            // handleDelete={handleDelete}
+          />
+        </div>
       )}
       <Button
         variant="outlined"

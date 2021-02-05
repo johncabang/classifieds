@@ -15,6 +15,7 @@ import Settings from "./components/pages/Settings";
 import Notifications from "./components/pages/Notifications";
 import Favourites from "./components/pages/Favourites";
 import DetailedPost from "./components/pages/DetailedPost";
+import NotFound from "./components/pages/NotFound";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -25,7 +26,7 @@ import fire from "./firebase";
 const useStyles = makeStyles(() => ({
   root: {
     backgroundColor: "#F8F9F9",
-    borderTop: "6px solid #ff7961",
+    // borderTop: "6px solid #ff7961",
   },
 }));
 
@@ -117,6 +118,7 @@ function App() {
 
   useEffect(() => {
     authListener();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -150,6 +152,9 @@ function App() {
         <Route path="/favourites" component={Favourites} />
         <Route path="/CreatePost" component={CreatePost} />
         <Route path="/item/:id" component={DetailedPost} />
+        <Route path="*">
+          <NotFound />
+        </Route>
       </Switch>
       <Footer />
     </div>

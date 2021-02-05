@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 
 import { makeStyles } from "@material-ui/core/styles";
+import Skeleton from "@material-ui/lab/Skeleton";
 
 import {
   Button,
@@ -55,6 +56,21 @@ function DetailedPost() {
       {isLoading && (
         <div>
           <LinearProgress color="secondary" />
+
+          <Grid container spacing={0} className={classes.root}>
+            <Grid item xs={12}>
+              <div className={classes.cardcontainer}>
+                <Card className={classes.card}>
+                  <Skeleton
+                    variant="rect"
+                    animation="wave"
+                    width={500}
+                    height={900}
+                  />
+                </Card>
+              </div>
+            </Grid>
+          </Grid>
         </div>
       )}
       {item && (
