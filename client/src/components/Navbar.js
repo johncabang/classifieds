@@ -30,10 +30,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     borderTop: "6px solid #ff7961",
     height: 80,
+    // zIndex: 100,
   },
   appbar: {
-    width: "100%",
-    zIndex: 100,
+    // width: "auto",
   },
   nav: {
     alignItems: "center",

@@ -22,11 +22,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import "./App.css";
 
 import fire from "./firebase";
+import ScrollToTop from "./components/ScrollToTop";
 
 const useStyles = makeStyles(() => ({
   root: {
     backgroundColor: "#F8F9F9",
-    // borderTop: "6px solid #ff7961",
   },
 }));
 
@@ -123,6 +123,7 @@ function App() {
 
   return (
     <div className={classes.root}>
+      <ScrollToTop />
       <Navbar user={user} handleLogout={handleLogout} />
       <Switch>
         <Route path="/" exact component={Home} />
@@ -150,7 +151,7 @@ function App() {
         <Route path="/settings" component={Settings} />
         <Route path="/notifications" component={Notifications} />
         <Route path="/favourites" component={Favourites} />
-        <Route path="/CreatePost" component={CreatePost} />
+        <Route path="/createpost" component={CreatePost} />
         <Route path="/item/:id" component={DetailedPost} />
         <Route path="*">
           <NotFound />

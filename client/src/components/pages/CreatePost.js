@@ -84,7 +84,7 @@ function Post() {
       body: JSON.stringify(item),
     }).then(() => {
       console.log("new item added");
-      history.pushState("/");
+      history.push("/");
       setIsPending(false);
     });
   };

@@ -16,6 +16,7 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "#ff7961",
     color: "white",
     height: "15vh",
+    width: "auto",
   },
   icons: {
     display: "flex",
