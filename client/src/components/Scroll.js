@@ -1,3 +1,7 @@
+{
+  /* <Scroll showBelow={150} /> */
+}
+
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
@@ -55,7 +59,3 @@ const Scroll = ({ showBelow }) => {
 };
 
 export default Scroll;
-
-{
-  /* <Scroll showBelow={150} /> */
-}
