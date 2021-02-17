@@ -29,11 +29,10 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "15%",
     backgroundColor: "white",
     borderTop: "6px solid #ff7961",
+    top: 0,
     height: 80,
-    // zIndex: 100,
-  },
-  appbar: {
-    // width: "auto",
+    position: "sticky",
+    zIndex: 999,
   },
   nav: {
     alignItems: "center",
@@ -115,12 +114,7 @@ function Navbar(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar
-        position="static"
-        color="inherit"
-        elevation={0}
-        className={classes.appbar}
-      >
+      <AppBar position="static" color="inherit" elevation={0}>
         <Toolbar style={{ padding: 0 }}>
           {isMobile ? (
             <div className={classes.nav}>
@@ -195,11 +189,11 @@ function Navbar(props) {
                       <MenuItem onClick={() => handleMenuClick("/myads")}>
                         My Ads
                       </MenuItem>
-                      <MenuItem onClick={() => handleMenuClick("/settings")}>
-                        Settings
-                      </MenuItem>
                       <MenuItem onClick={() => handleMenuClick("/favourites")}>
                         Favourites
+                      </MenuItem>
+                      <MenuItem onClick={() => handleMenuClick("/settings")}>
+                        Settings
                       </MenuItem>
                       <MenuItem
                         onClick={function () {
